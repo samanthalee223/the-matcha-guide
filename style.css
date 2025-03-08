@@ -13,30 +13,30 @@ html {
 .top-nav {
     position: fixed;
     top: 3%;
-    width: 100%;
-    margin-left: 60px;
+    width: 90%;
+    margin-left: 65px;
     text-align: right;
     /* styling referenced from figma dev mode */
     border-radius: 0.7rem;
     border: 3px solid rgba(36, 89, 2, 1);
     background: #F9F6F4;
     /* box-shadow: offset-x offset-y blur-radius colour; https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow */
-    box-shadow: 0.4rem 0.4rem rgba(36, 89, 2, 1);
+    box-shadow: 0.35rem 0.35rem rgba(36, 89, 2, 1);
 }
 
 .nav-div {
     margin: auto 5%;
-    padding: 1.5rem 0;
+    padding: 1rem 0;
 }
 
 .nav-bar {
     display: flex;
-    /* align-items: center; */
+    align-items: center; 
     justify-content: flex-end;
     gap: 60px;
 }
 
-a {
+.top-nav a {
     color: rgba(36, 89, 2, 1);
     text-decoration: none;
 }
@@ -45,24 +45,27 @@ a {
     display: flex;
     position: fixed;
     top: 0%;
-    width: 10rem;
-    height: 7rem;
-    text-align: right;
+    margin-left: 65px;
+    width: 8.5rem;
+    height: 6rem;
     /* styling referenced from figma dev mode */
     border-radius: 0.7rem;
     border: 3px solid rgba(36, 89, 2, 1);
     background: #F9F6F4;
     /* box-shadow: offset-x offset-y blur-radius colour; https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow */
-    box-shadow: 0.4rem 0.4rem rgba(36, 89, 2, 1);
+    box-shadow: 0.35rem 0.35rem rgba(36, 89, 2, 1);
+    z-index: 1;
 }
 
 .nav-logo {
-    font-size: 2rem;
+    font-size: 1.8rem;
     line-height: 86%;
-    padding: 15px 18px;
+    padding: 10px 15px;
     align-items: center;
     float: left;
     text-align: left;
+    text-decoration: none;
+    color:rgba(36, 89, 2, 1)
 }
 
 /* splits the home page from the rest of the links using split class and float*/
@@ -84,11 +87,15 @@ a {
 
 .footer {
     width: 100%;
+    height: 70vh;
     padding: 10px;
     background-color: rgba(36, 89, 2, 1);
     color: rgba(249, 246, 244, 1);
     text-align: center;
+    
 }
+
+
 
 h1 {
     margin-top: 150px;
