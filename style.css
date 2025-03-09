@@ -66,6 +66,7 @@ html {
     text-align: left;
     text-decoration: none;
     color:rgba(36, 89, 2, 1)
+    
 }
 
 /* splits the home page from the rest of the links using split class and float*/
@@ -83,6 +84,7 @@ html {
 .nav-bar a:hover {
     background-color: rgba(36, 89, 2, 1);
     color: rgba(249, 246, 244, 1);
+    
   }
 
 .footer {
@@ -92,7 +94,7 @@ html {
     background-color: rgba(36, 89, 2, 1);
     color: rgba(249, 246, 244, 1);
     text-align: center;
-    
+
 }
 
 
