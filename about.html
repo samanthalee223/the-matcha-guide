@@ -1,68 +1,163 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta http-equiv="X-UA-Compatible" content="ie=edge">
-<title>The Matcha Guide: All About Matcha</title>
-<link rel="stylesheet" href="style.css">
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>The Matcha Guide: All About Matcha</title>
+        <link rel="stylesheet" href="css/style.css">
+
+        <style>
+            /* in-class CSS demo
+            body {
+                color: darkslategrey;
+            }
+        
+            * {
+                scroll-behavior: smooth;
+                font-size: 1rem;
+                background-color: rgb(0, 0, 0);
+            }
+
+            p {
+                font-family: sans-serif;
+                font-size: 1.5rem;
+                line-height: 1.5;
+                word-spacing: -10%;
+                color: lightblue;
+            }
+            */
+            
+            /*
+            .back-to-top {
+                position: fixed;
+                right: 0;
+                bottom: 1%;
+                width: auto;
+                background-color: none;
+                font-size: 1.5rem;
+                text-align: right;
+            }
+
+            .back-to-top a {
+                color: rgb(255, 255, 255);
+                background-color: rgba(36, 89, 2, 1);
+                padding: 10px 10px 10px 10px;
+                text-decoration: none;
+            }
+            */
+
+        </style>
+    </head>
 
 <body>
 
-   <!--This is the navigation bar https://www.w3schools.com/howto/howto_css_topnav_split.asp -->
+    <!--This is the navigation bar https://www.w3schools.com/howto/howto_css_topnav_split.asp -->
     <nav>
         <div class="logo-div">
             <a class="nav-logo" href="index.html">The Matcha Guide</a>
         </div>
     </nav>
-    <div class="top-nav">
-        <div class="nav-div">
-            <nav class="nav-bar">
-                <a class="nav-item" href="about.html">All About Matcha</a>
+    <nav class="top-nav">
+            <div class="nav-bar">
+                <a class="active" href="about.html">All About Matcha</a>
                 <a class="nav-item" href="essentials.html">Matcha Essentials</a>
                 <a class="nav-item" href="recipes.html">Matcha Recipes</a>
-            </nav>
-        </div>
-    </div>
+            </div>
+    </nav>
 <h1>All About Matcha</h1>
 
 <div>
+    <h3>Table of Contents</h3>
+    <a href="#what-is-matcha">What is Matcha?</a>
+    <a href="#matcha-made">How is Matcha Made?</a>
+    <a href="#matcha-taste">What Does Matcha Taste Like?</a>
+    <a href="#tea-ceremony">Traditional Japanese Tea Ceremony</a>
+    <a href="#matcha-caffeine">Caffeine: Matcha vs. Coffee</a>
+    <a href="#health-benefits">Health Benefits</a>
+</div>
+
+<div id="what-is-matcha">
     <h2>What is Matcha?</h2>
-	<p>This is the filler text that will talk about what matcha is</p>
-    <img src="images/name.png">
+	<p>Matcha is a fine milled powder made from the shade-grown plant Camellia Sinensis which also produces oolong and other green teas. Matcha originates from China but has become an important part of Japanese tea culture. </p>
+    <img src="images/swoosh-matcha.svg">
 </div>
 
-<div>
+<div id="matcha-made">
     <h2>How is Matcha Made?</h2>
-    <p>This is the filler text that will talk about how matcha is made</p>
+    <ol>
+        <li>
+            The tea leaves are grown in the shade which produces more chlorophyll and produces more antioxidants and amino acids. This process is done two to six weeks before harvesting.
+        </li>
+        <li>
+            The youngest leaves are hand picked for the first harvest in mid-April to mid-May and are the highest quality. The second harvest occurs around 40 days after.
+        </li>
+        <li>
+            The harvested leaves are steamed to prevent them from oxidizing and dried. The dried tea leaves are crushed into tencha, the result before the final matcha powder is made.
+        </li>
+        <li>
+            The crushed leaves are de-stemmed and graded before being stored in a refrigerated room.
+        </li>
+        <li>
+            Tea processors grind the tencha into a fine powder, creating matcha.
+        </li>
+    </ol>
     <img src="images/name.png">
 </div>
 
-<div>
+<div id="matcha-taste">
     <h2>What Does Matcha Taste Like?</h2>
-    <p>This is the filler text that will talk about the different wys to describe the flavours of different matcha</p>
+    <p>Depending on the blend of matcha and the way it is prepared, matcha can taste vastly different and bring out different notes. Identifying these flavours takes experience, so if you are a beginner, this can be very intimidating and can make it harder to know what your preferences are. Here is a breakdown of common ways to describe the flavours of matcha in English:</p>
     <img src="images/name.png">
+
+    <h3>Vegetal:</h3>
+    <p>Vegetal refers to the slightly grassy, vegetable-like flavours in matcha. Since matcha is made from dried leaves, its vegetal notes are stronger than regular green tea.</p>
+
+    <h3>Sweetness:</h3>
+    <p>Plain matcha with no milk or sweeteners has a subtle sweetness that balances out the stronger flavours in matcha. This usually appears as a sweet aftertaste after an initial bitter taste.</p>
+
+    <h3>Umami:</h3>
+    <p>Umami is probably the hardest to describe and identify. In other dishes, umami is a Japanese expression used to describe foods like miso soup that are savoury, rich, and slightly oceanic. Umami in matcha is a result of the shading process while growing the leaves and the increased production of amino acids like L-theanine.</p>
+
+    <h3>Astringency:</h3>
+    <p>In English, bitterness has a negative connotation, but in Japanese there is a distinction between “good” bitterness and “bad” bitterness. The closest term to describe matcha’s earthy bitterness is astringency. Low quality matcha may taste unpleasantly bitter, but high quality matcha will usually have a slight astringency on the first sip.</p>
+
+    <p>There is usually a description of the flavours using these terms on the matcha packaging. A good blend of matcha will have the perfect balance of all tasting notes. What is most important for beginners is finding a blend that suits your preferences and budget and easing into the flavours of matcha.</p>
 </div>
 
-<div>
-    <h2>Traditional Matcha Preparation</h2>
+<div id="tea-ceremony">
+    <h2>Traditional Japanese Tea Ceremony: Usucha vs. Koicha</h2>
     <p>This is the filler text that will talk about usucha and koicha</p>
     <img src="images/name.png">
 </div>
 
-<div>
-    <h2>Caffiene: Matcha vs. Coffee</h2>
-    <p>This is the filler text that will talk about the differences between coffee and matcha in terms of caffeine</p>
+<div id="matcha-caffeine">
+    <h2>Caffeine: Matcha vs. Coffee</h2>
+    <p>Like coffee, matcha contains caffeine. However, the L-theanine provides a more balanced, milder energy boost for a longer period of time compared to the shorter, larger boost from coffee.</p>
     <img src="images/name.png">
 </div>
 
-<div>
+<div id="health-benefits">
     <h2>Health Benefits</h2>
-    <p>This is the filler text that will talk about the health benefits of drinking matcha</p>
+    <p>Due to shade growing techniques, matcha is rich in antioxidants and L-theanine, an amino acid that helps with relaxation while giving you a boost of energy. L-theanine is known to reduce stress, improve sleep quality, and lessen the negative effects of caffeine. Since the leaves are ground into a fine powder, matcha contains nutrients from the whole plant.</p>
     <img src="images/name.png">
 </div>
 
+
+<div class="back-to-top">
+    <a href="#top">Back to Top ↑</a>
+</div>
+
+
+<footer class="footer">
+    <h2>Explore the World of Matcha</h2>
+        <a href="about.html">All About Matcha</a>
+        <a class="active" href="essentials.html">Matcha Essentials</a>
+        <a href="recipes.html">Matcha Recipes</a>
+        <a href="index.html">The Matcha Guide</a>
+        <a href="#top">Back to Top</a>
+        <p>Website created by Samantha Lee, 2025</p>
+</footer>
 
 </body>
 </html>

@@ -1,0 +1,551 @@
+/* styling applied to all pages */
+
+body {
+    margin:0; /* default margin is 8px, this overrides that for things like the footer*/
+    color: rgba(36, 89, 2, 1); /*sets all text in the body/protein section to the same colour*/
+}
+
+html {
+    background-color: rgba(249, 246, 244, 1); /*sets bg colour for the whole page, all pages*/
+    /* margin: auto 5%; */
+    scroll-behavior: smooth; /*makes jump links scroll smoothly instead of jumping*/
+}
+
+.top-nav {
+    position: fixed;
+    display: flex;
+    justify-content: flex-end;
+    overflow: hidden;
+
+    top: 3%;
+    width: 90%;
+    margin-left: 65px;
+    text-align: right;
+
+    /* styling referenced from figma dev mode */
+    border-radius: 0.7rem;
+    border: 3px solid rgba(36, 89, 2, 1);
+    background: #F9F6F4;
+    /* box-shadow: offset-x offset-y blur-radius colour; https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow */
+    box-shadow: 0.35rem 0.35rem rgba(36, 89, 2, 1);
+}
+
+.nav-bar {
+    position: relative;
+    margin: auto 3%;
+    padding: 1rem 0;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 60px;
+}
+
+.top-nav a {
+    color: rgba(36, 89, 2, 1);
+    text-decoration: none;
+}
+
+/* flex box: https://www.w3schools.com/css/css3_flexbox.asp */
+.logo-div {
+    display: flex;
+    position: fixed;
+    top: 0%;
+    margin-left: 65px;
+    width: 8.5rem;
+    height: auto;
+
+    /* styling referenced from figma dev mode */
+    border-radius: 0.7rem;
+    border: 3px solid rgba(36, 89, 2, 1);
+    background: #F9F6F4;
+    /* box-shadow: offset-x offset-y blur-radius colour; https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow */
+    box-shadow: 0.35rem 0.35rem rgba(36, 89, 2, 1);
+    z-index: 1;
+}
+
+.nav-logo {
+    font-size: 1.8rem;
+    line-height: 86%;
+    padding: 10px 15px;
+    border-radius: 0.7rem;
+    align-items: center;
+    float: left;
+    text-align: left;
+    text-decoration: none;
+    color:rgba(36, 89, 2, 1)
+}
+
+@media screen and (max-width: 600px) {
+    .top-nav a {
+        display: none;
+    }
+  }
+
+/* splits the home page from the rest of the links using split class and float*/
+/* .top-nav a.split {
+    float: left;
+}
+
+.top-nav a {
+    margin: auto 5%;
+    display: inline-block;
+    padding: 1.5rem 0;
+} */
+
+/* hover effect on links: https://www.w3schools.com/cssref/sel_hover.php */
+.nav-bar a:hover {
+    background-color: rgba(36, 89, 2, 1);
+    color: rgba(249, 246, 244, 1);
+  }
+
+  .nav-bar a.active {
+    background-color: rgba(36, 89, 2, 1);
+    color: rgba(249, 246, 244, 1);
+  }
+
+
+
+
+.back-to-top {
+    position: sticky;
+    right: 0;
+    bottom: 2%;
+    width: auto;
+    background-color: none;
+    font-size: 1.5rem;
+    text-align: right;
+    margin-right: 0.5%;
+    margin-bottom: 2%;
+
+    
+}
+
+.back-to-top a {
+    color: rgba(36, 89, 2, 1);
+    background-color: rgba(249, 246, 244, 1);
+    padding: 5px 10px 5px 10px;
+    text-decoration: none;
+    font-size: 1.25rem;
+
+    border-radius: 1.5rem;
+    border: 2px solid rgba(36, 89, 2, 1);
+}
+
+
+.footer {
+    position: sticky;
+    width: 100%;
+    height: 70vh;
+    padding: 10px;
+    background-color: rgba(36, 89, 2, 1);
+    color: rgba(249, 246, 244, 1);
+    text-align: center;
+}
+
+.footer a {
+    color: rgba(249, 246, 244, 1);
+}
+
+
+
+/* T Y P O G R A P H Y*/
+
+h1 {
+    margin-top: 150px;
+    text-align: center;
+    font-size: 2.5rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+    line-height: 120%;
+}
+
+p {
+    font-size: 1.125rem;
+    line-height: 120%;
+}
+
+
+
+/* styling for the matcha essentials page */
+
+/* .essentials-toc {
+    position: fixed;
+    left: 0;
+    width: auto;
+    border-radius: 0.7rem;
+    border: 2px solid rgba(36, 89, 2, 1);
+    background: #F9F6F4;
+    padding: 5px 20px;
+    box-shadow: 0.4rem 0.4rem rgba(36, 89, 2, 1); 
+} */
+
+
+.section-1 {
+    background-color: rgba(115, 186, 79, 1);
+    color: #F9F6F4;
+}
+
+.section-1 h1 {
+    text-align: left;
+    padding-top: 1.5rem;
+    margin-left: 10%
+}
+
+.section-1 h3 {
+    text-align: left;
+    margin-left: 10%;
+}
+
+.section-1 ol {
+    text-align: left;
+    margin-left: 10%;
+    font-size: 1.25rem;
+    /*list-style: none; */
+
+    /* margin: 0.5rem 5% 5% 5%;*/
+    padding-bottom: 1.5rem;
+}
+
+.section-1 a {
+    /* text-decoration: none; */
+    color: #F9F6F4;
+}
+
+
+
+.material-grid {
+    display: grid;
+    /*grid-template-columns: repeat(auto-fit, minmax(10rem, 24rem)); /*makes grid responsive but doesn't scale content according to screen size */
+    grid-template-columns: auto auto auto;
+    /*grid-template-areas:
+      'header header header'
+      'main main2 main3'
+      'main4 main5 main6'; */
+    grid-gap: 1em 3em;
+    padding: 10px 10px 50px;
+    margin: auto 5% auto 5%;
+  }
+
+.material-grid img {
+    width: 60%;
+    height: auto;
+}
+
+@media only screen and (max-width:600px) {
+    .material-grid {
+        display: grid;
+        grid-template-columns: auto;
+    }
+
+}
+  
+.item-1 {
+    /* grid-area: header; */
+    text-align: center;
+}
+
+.item-2 {
+    /* grid-area: main; */
+    border-radius: 0.7rem;
+    border: 2px solid rgba(36, 89, 2, 1);
+    background: #F9F6F4;
+    padding: 10px 30px;
+    box-shadow: 0.4rem 0.4rem rgba(36, 89, 2, 1);
+    align-content: center;
+}
+
+.item-2:hover {
+    box-shadow: 0.7rem 0.8rem rgba(36, 89, 2, 1);
+}
+
+.item-3 {
+    /* grid-area: main2; */
+    border-radius: 0.7rem;
+    border: 2px solid rgba(36, 89, 2, 1);
+    background: #F9F6F4;
+    padding: 10px 30px;
+    box-shadow: 0.4rem 0.4rem rgba(36, 89, 2, 1);
+}
+
+.item-4 {
+    /* grid-area: main3; */
+    border-radius: 0.7rem;
+    border: 2px solid rgba(36, 89, 2, 1);
+    background: #F9F6F4;
+    padding: 10px 30px;
+    box-shadow: 0.4rem 0.4rem rgba(36, 89, 2, 1);
+}
+
+.item-5 {
+    /* grid-area: main4; */
+    border-radius: 0.7rem;
+    border: 2px solid rgba(36, 89, 2, 1);
+    background: #F9F6F4;
+    padding: 10px 30px;
+    box-shadow: 0.4rem 0.4rem rgba(36, 89, 2, 1);
+}
+
+.item-6 {
+    /* grid-area: main5; */
+    border-radius: 0.7rem;
+    border: 2px solid rgba(36, 89, 2, 1);
+    background: #F9F6F4;
+    padding: 10px 30px;
+    box-shadow: 0.4rem 0.4rem rgba(36, 89, 2, 1);
+}
+    
+
+
+/* mobile view */
+
+/*
+@media screen and (max-width: 600px) {
+    .material-grid {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  } */
+
+/* .item-2 {
+    grid-area: 2 / 1 / 3 / 4;
+}
+
+.item-3 {
+    grid-area: 2 / 3 / 4 / 5;
+}
+
+.item-4 {
+    grid-area: 2 / 5 / 6 / 7;
+}
+
+.item-5 {
+    grid-area: 3 / 1 / 3 / 3l
+}
+
+.item-6 {
+    grid-area: 3 / 3 / 4 / 5;
+}
+*/
+
+.buy-grid {
+    /*display: grid;
+    grid-template-areas:
+      'header header header aside aside aside'
+      'main1 main2 main3 main4 main5 main6'
+      'footer1 footer2 footer3 footer4 footer5 footer6';
+    grid-gap: 1em 3em; */
+
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+
+    align-items: center;
+    background-color: rgba(36, 89, 2, 1);
+    color: rgba(249, 246, 244, 1);
+    padding: 0 30px;
+    margin: 0; 
+  }
+
+.buy-grid a {
+    color: rgba(249, 246, 244, 1);
+    text-decoration: none;
+}
+
+img {
+    width: 300px;
+}
+
+.buy-1 {
+    grid-area: header;
+    text-align: left;
+    margin: auto 5%;
+}
+
+.buy-2 {
+    grid-area: main1;
+    margin: auto 15%;
+}
+
+.buy-3 {
+    grid-area: main2;
+}
+
+.buy-4 {
+    grid-area: main3;
+}
+
+.buy-5 {
+    grid-area: main4;
+}
+
+.buy-6 {
+    grid-area: main5;
+}
+
+
+.finding-matcha {
+    display: grid;
+    /*grid-template-columns: repeat(auto-fit, minmax(1rem, 30rem));*/
+    grid-template-columns: auto auto;
+    grid-gap: 1em 3em;
+    padding: 10px 30px;
+    
+
+    margin: 5% 10% 5%;
+    border-radius: 0.7rem;
+    border: 3px solid rgba(36, 89, 2, 1);
+    background: #F9F6F4;
+    /* box-shadow: offset-x offset-y blur-radius colour; https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow */
+    box-shadow: 0.35rem 0.35rem rgba(36, 89, 2, 1);
+}
+
+.finding-matcha img {
+    display: flex;
+    width: 100%;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+@media only screen and (max-width:800px) {
+    .finding-matcha {
+        display: grid;
+        grid-template-columns: auto;
+    }
+
+    .finding-matcha img {
+        margin-top: 0;
+        margin-bottom: 5%
+    }
+
+    
+}
+
+#matcha-care {
+    display: grid;
+    grid-template-areas: 
+        'header header header'
+        'main main aside'
+        'footer image image';
+    grid-template-rows: auto;
+    grid-gap: 1em 3em;
+    padding: 10px 30px;
+
+    margin: 1% 10% 5%; /* TOP RIGHT BOTTOM LEFT */
+}
+
+#matcha-care-header {
+    grid-area: header;
+    text-align: center;
+}
+
+#storing-matcha {
+    grid-area: main;
+
+}
+
+#matcha-care img {
+    grid-area: aside;
+}
+
+#chasen-care {
+    grid-area: footer;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* beginning of styling for Matcha Recipes page */
+
+/*
+.recipe-grid {
+    display: grid;
+    grid-template-areas:
+      'header header header header'
+      'filter main main2 main3'
+      'filter main4 main5 main6';
+    grid-gap: 1em 3em;
+    padding: 10px 10px 50px;
+    margin: auto 5% ;
+}
+
+.recipe-filter {
+    grid-area: filter;
+    width: auto;
+    position: fixed;
+    border-radius: 0.7rem;
+    border: 2px solid rgba(36, 89, 2, 1);
+    background: #F9F6F4;
+    padding: 5px 15px;
+    box-shadow: 0.4rem 0.4rem rgba(36, 89, 2, 1);
+}
+
+.recipe-1 {
+    grid-area: main;
+    border-radius: 0.7rem;
+    border: 2px solid rgba(36, 89, 2, 1);
+    background: #F9F6F4;
+    padding: 10px 30px;
+    height: 50vh;
+    box-shadow: 0.4rem 0.4rem rgba(36, 89, 2, 1);
+}
+
+.recipe-2 {
+    grid-area: main2;
+    border-radius: 0.7rem;
+    border: 2px solid rgba(36, 89, 2, 1);
+    background: #F9F6F4;
+    padding: 10px 30px;
+    box-shadow: 0.4rem 0.4rem rgba(36, 89, 2, 1);
+}
+
+.recipe-3 {
+    grid-area: main3;
+    border-radius: 0.7rem;
+    border: 2px solid rgba(36, 89, 2, 1);
+    background: #F9F6F4;
+    padding: 10px 30px;
+    box-shadow: 0.4rem 0.4rem rgba(36, 89, 2, 1);
+}
+
+.recipe-4 {
+    grid-area: main4;
+    border-radius: 0.7rem;
+    border: 2px solid rgba(36, 89, 2, 1);
+    background: #F9F6F4;
+    padding: 10px 30px;
+    box-shadow: 0.4rem 0.4rem rgba(36, 89, 2, 1);
+}
+
+.recipe-5 {
+    grid-area: main5;
+    border-radius: 0.7rem;
+    border: 2px solid rgba(36, 89, 2, 1);
+    background: #F9F6F4;
+    padding: 10px 30px;
+    height: 50vh;
+    box-shadow: 0.4rem 0.4rem rgba(36, 89, 2, 1);
+}
+
+.recipe-6 {
+    grid-area: main6;
+    border-radius: 0.7rem;
+    border: 2px solid rgba(36, 89, 2, 1);
+    background: #F9F6F4;
+    padding: 10px 30px;
+    box-shadow: 0.4rem 0.4rem rgba(36, 89, 2, 1);
+} */
