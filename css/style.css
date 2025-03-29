@@ -2,13 +2,18 @@
 
 body {
     margin:0; /* default margin is 8px, this overrides that for things like the footer*/
-    color: rgba(36, 89, 2, 1); /*sets all text in the body/protein section to the same colour*/
+    color: rgb(0, 0, 0); /*sets all text in the body/protein section to the same colour*/
+    /*overflow-x: hidden;*/
 }
 
 html {
     background-color: rgba(249, 246, 244, 1); /*sets bg colour for the whole page, all pages*/
     /* margin: auto 5%; */
-    scroll-behavior: smooth; /*makes jump links scroll smoothly instead of jumping*/
+    /*scroll-behavior: smooth; /*makes jump links scroll smoothly instead of jumping*/
+}
+
+a {
+    color:rgba(36, 89, 2, 1);
 }
 
 .top-nav {
@@ -28,6 +33,14 @@ html {
     background: #F9F6F4;
     /* box-shadow: offset-x offset-y blur-radius colour; https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow */
     box-shadow: 0.35rem 0.35rem rgba(36, 89, 2, 1);
+    z-index: 1;
+}
+
+
+
+@media screen and (max-width: 600px) {
+   
+
 }
 
 .nav-bar {
@@ -35,7 +48,6 @@ html {
     margin: auto 3%;
     padding: 1rem 0;
     display: flex;
-    flex-wrap: wrap;
     flex-direction: row;
     gap: 60px;
 }
@@ -44,6 +56,21 @@ html {
     color: rgba(36, 89, 2, 1);
     text-decoration: none;
 }
+
+.hamburger-menu {
+    display: none;
+    cursor: pointer;
+}
+
+.bar {
+    display: block; 
+    width: 25px;
+    height: 3px; 
+    margin: 5px 0;
+    transition: all 0.3s ease;
+    background-color: black;
+}
+
 
 /* flex box: https://www.w3schools.com/css/css3_flexbox.asp */
 .logo-div {
@@ -60,7 +87,7 @@ html {
     background: #F9F6F4;
     /* box-shadow: offset-x offset-y blur-radius colour; https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow */
     box-shadow: 0.35rem 0.35rem rgba(36, 89, 2, 1);
-    z-index: 1;
+    z-index: 2;
 }
 
 .nav-logo {
@@ -74,12 +101,6 @@ html {
     text-decoration: none;
     color:rgba(36, 89, 2, 1)
 }
-
-@media screen and (max-width: 600px) {
-    .top-nav a {
-        display: none;
-    }
-  }
 
 /* splits the home page from the rest of the links using split class and float*/
 /* .top-nav a.split {
@@ -104,6 +125,28 @@ html {
   }
 
 
+
+.bottom-button {
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+    gap: 30px;
+    width: auto;
+    background-color: none;
+    font-size: 1.5rem;
+    margin: 5% auto 5% auto;
+}
+
+.bottom-button a {
+    color: rgba(36, 89, 2, 1);
+    background-color: rgba(249, 246, 244, 1);
+    padding: 5px 10px 5px 10px;
+    text-decoration: none;
+    font-size: 1.25rem;
+    width: auto;
+    border-radius: 1.5rem;
+    border: 2px solid rgba(36, 89, 2, 1);
+}
 
 
 .back-to-top {
@@ -134,9 +177,19 @@ html {
 
 .footer {
     position: sticky;
+    /*
+    display: grid;
+    grid-template-areas: 
+        'header header header'
+        'link link link'
+        'bottom bottom bottom';
+    column-gap: 100px;
+    */
+    
+
     width: 100%;
     height: 70vh;
-    padding: 10px;
+    padding-top: 10px;
     background-color: rgba(36, 89, 2, 1);
     color: rgba(249, 246, 244, 1);
     text-align: center;
@@ -145,6 +198,54 @@ html {
 .footer a {
     color: rgba(249, 246, 244, 1);
 }
+
+.footer-header {
+    grid-area: header;
+}
+
+.footer-nav {
+    grid-area: link;
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin-top: 0;
+}
+
+.footer-bottom {
+    grid-area: bottom;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8rem;
+    margin-top: 40vh;
+    white-space: nowrap;
+}
+
+.footer-logo a {
+    /*grid-area: logo;*/
+    text-decoration: none;
+
+}
+
+.footer-top a {
+    /*grid-area: backtotop;*/
+    color: rgba(36, 89, 2, 1);
+    background-color: rgba(249, 246, 244, 1);
+    padding: 5px 10px 5px 10px;
+    text-decoration: none;
+    font-size: 1.25rem;
+
+    border-radius: 1.5rem;
+    border: 2px solid rgba(36, 89, 2, 1);
+
+}
+
+.footer-info {
+   /*grid-area: info;*/
+    background-color:rgb(0, 0, 0)
+}
+
+
 
 
 
@@ -432,8 +533,9 @@ img {
     display: grid;
     grid-template-areas: 
         'header header header'
-        'main main aside'
-        'footer image image';
+        'main aside aside'
+        'footer footer image'
+        'chashaku chashaku image';
     grid-template-rows: auto;
     grid-gap: 1em 3em;
     padding: 10px 30px;
@@ -459,9 +561,263 @@ img {
     grid-area: footer;
 }
 
+#chashaku-care {
+    grid-area: chashaku;
+}
+
+
+/* THIS IS THE BEGINNING OF THE ALL ABOUT MATCHA PAGE*/ 
+
+#what-is-matcha {
+    display: flex;
+    flex-direction: row;
+
+    padding: 10px 10px 50px;
+    margin: 5% 15% auto 15%;
+    border-radius: 0.7rem;
+    border: 2px solid rgba(36, 89, 2, 1);
+    background: #F9F6F4;
+    padding: 10px 30px;
+    box-shadow: 0.4rem 0.4rem rgba(36, 89, 2, 1);
+    align-content: center;
+}
+
+#what-is-matcha img {
+    width: 100%;
+    height: auto;
+}
+
+
+@media only screen and (max-width:600px) {
+    #what-is-matcha {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #what-is-matcha img{
+        width: 100%;
+        height: auto;
+    }
+
+}
+
+
+#matcha-made {
+    background: rgb(36,89,2);
+    background: linear-gradient(0deg, rgba(36,89,2,1) 0%, rgba(115,186,79,1) 75%, rgba(249,246,244,1) 100%);
+    margin-top: 3%;
+}
+
+.matcha-made-grid {
+    display: grid;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    grid-template-rows: auto;
+    grid-template-columns: 1fr 100px 1fr;
+    grid-template-areas:
+        'header header header'
+        'item1 bar image1'
+        'item2 bar image2'
+        'item3 bar image3'
+        'item4 bar image4'
+        'item5 bar image5';  
+    padding-top: 80px;
+    height: 400vh;
+    margin: auto 15%;
+    text-align: center;
+}
+
+@media only screen and (max-width:850px) {
+    .matcha-made-grid {
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-template-areas:
+            'header header'
+            'bar item1'
+            'bar image1'
+            'bar item2'
+            'bar image2'
+            'bar item3'
+            'bar image3'
+            'bar item4'
+            'bar image4'
+            'bar item5'
+            'bar image5';
+        grid-column-gap: 5%;
+        margin: auto 15%;
+    }
+}
+
+#matcha-made h2 {
+    grid-area: header;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+#matcha-made img {
+    width: 100%;
+    height: auto; 
+}
+
+/* https://www.w3schools.com/howto/howto_css_vertical_line.asp */
+.progress-bar {
+    grid-area: bar;
+    border-left: 3px solid rgba(249,246,244,1);
+    height: 375vh;
+    position: sticky;
+    z-index: 0;
+    margin-left: 50%
+}
+
+.matcha-made-item1 {
+    grid-area: item1;
+}
+
+.step-1-img {
+    grid-area: image1;
+}
+
+
+.matcha-made-item2 {
+    grid-area: item2;
+}
+
+.step-2-img {
+    grid-area: image2;
+}
+
+.matcha-made-item3 {
+    grid-area: item3;
+}
+
+.step-3-img {
+    grid-area: image3;
+}
+
+.matcha-made-item4 {
+    grid-area: item4;
+    color: rgba(249, 246, 244, 1);
+}
+
+.step-4-img {
+    grid-area: image4;
+}
+
+.matcha-made-item5 {
+    grid-area: item5;
+    color: rgba(249, 246, 244, 1);
+}
+
+.step-5-img {
+    grid-area: image5;
+}
+
+
+#matcha-taste {
+    background: rgb(249,246,244);
+    background: linear-gradient(0deg, rgba(249,246,244,1) 0%, rgba(115,186,79,1) 53%, rgba(36,89,2,1) 100%);
+}
+
+.matcha-taste-grid {
+    display: grid;
+    grid-template-areas:
+        'header header'
+        'vegetal blank'
+        'img sweetness'
+        'img umami'
+        'astringency aside';
+    column-gap: 30px;
+    margin: auto 20%;
+    padding-top: 20%;
+    padding-bottom: 15%
+}
+
+@media only screen and (max-width:800px) {
+    .matcha-taste-grid {
+        display: block;
+        margin: auto 15%;
+        padding-top: 10%;
+        padding-bottom: 15%
+    }
+}
+
+.matcha-taste-item1 {
+    grid-area: header;
+    text-align: center;
+    margin-bottom: 15%;
+}
 
 
 
+.matcha-taste-item2 {
+    grid-area: vegetal;
+}
+
+.matcha-taste-item3 {
+    grid-area: sweetness;
+}
+
+.matcha-taste-item4 {
+    grid-area: umami;
+}
+
+.matcha-taste-item5 {
+    grid-area: astringency;
+}
+
+
+.tea-ceremony-grid {
+    display: grid;
+    grid-template-areas: 
+        'header header'
+        'main main';
+    margin: auto 10%;
+    column-gap: 30px;
+    text-align: center;
+}
+
+@media only screen and (max-width:600px){
+    .tea-ceremony-grid {
+        display: block;
+    }
+}
+
+.tea-ceremony-grid img {
+    width: 100%;
+    height: auto;
+}
+
+.tea-ceremony-header {
+    grid-area: header;
+}
+
+.usucha {
+    border-radius: 0.7rem;
+    border: 2px solid rgba(36, 89, 2, 1);
+    background: #F9F6F4;
+    padding: 10px 30px;
+    box-shadow: 0.4rem 0.4rem rgba(36, 89, 2, 1);
+    margin-bottom: 10%
+}
+
+.koicha {
+    border-radius: 0.7rem;
+    border: 2px solid rgba(36, 89, 2, 1);
+    background: #F9F6F4;
+    padding: 10px 30px;
+    box-shadow: 0.4rem 0.4rem rgba(36, 89, 2, 1);
+    margin-bottom: 10%
+}
+
+.matcha-caffeine {
+    display: flex;
+    margin: auto 15%;
+}
+
+.health-benefits {
+    display: flex;
+    margin: auto 15%;
+}
 
 
 
@@ -549,3 +905,77 @@ img {
     padding: 10px 30px;
     box-shadow: 0.4rem 0.4rem rgba(36, 89, 2, 1);
 } */
+
+
+.recipe-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    column-width: 20%;
+    column-gap: 10%;
+    margin: auto 10%;
+    margin-left: 10%;
+    margin-bottom: 20%;
+    row-gap: 5%;
+}
+
+.recipe-grid img {
+    width: 50%;
+    height: auto;
+    display: flex;
+    align-content: center;
+}
+
+.recipe-grid a {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+
+    font-size: 1.25rem;
+}
+
+
+/*responsive 2 column for mobile */
+@media (max-width:800px) {
+    .recipe-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto auto auto;
+        margin-top: 5%;
+        margin-bottom: 50%;
+        margin-left: 15%;
+
+    }
+
+    .recipe-grid img {
+        width: 100%;
+        height: auto
+    }
+
+    .recipe-grid a{
+        white-space: wrap;
+    }
+}
+
+/*responsive 3 column for screen sizes in between mobile and desktop*/
+@media (min-width:801px) {
+    .recipe-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto auto auto auto;
+        margin-top: 5%;
+        margin-left: 15%;
+        margin-right: 15%;
+        margin-bottom: 20%;
+    }
+
+    .recipe-grid img {
+        height: auto;
+        width: 100%;
+    }
+}
+
+
+
+
+

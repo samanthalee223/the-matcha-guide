@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test</title>
+
+
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        body {
+            position: relative;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: antiquewhite;
+        }
+
+        .nav-item {
+            list-style: none;
+        }
+        header a {
+            text-decoration: none;
+            color: black;
+        }
+
+        .container {
+            width: 1600px;
+            margin: auto;
+        }
+
+        .subcontainer {
+            width: 85%;
+            margin: auto;
+        }
+
+        .navbar {
+            width: 100%;
+            min-height: 70px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-menu {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 60px
+        }
+
+        .nav-branding {
+            font-size: 1.5rem;
+        }
+
+        .hamburger-menu {
+            display: none;
+            cursor: pointer;
+        }
+
+        .bar {
+            display: block;
+            width: 25px;
+            height: 3px;
+            margin: 5px 0;
+            background-color: black;
+        }
+
+        @media(max-width:1600px) {
+            .container {
+                width: 100%;
+            }
+        }
+
+        @media(max-width:1000px) {
+            .hamburger-menu {
+                display: block;
+            }
+
+            .nav-menu {
+                position: fixed;
+                left: -100%;
+                top: 70px;
+                gap: 0;
+                flex-direction: column;
+                width: 100%;
+                text-align: center;
+            }
+
+            .nav-item {
+                margin: 16px 0;
+             }
+
+            .nav-menu.active {
+                left: 0;
+            }
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="subcontainer">
+                <nav class="navbar">
+                    <a href="#" class="nav-branding">The Matcha Guide</a>
+
+                    <ul class="nav-menu">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">Contact</a>
+                        </li>
+                    </ul>
+
+                    <div class="hamburger-menu">
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <section>
+        this is a random section
+    </section>
+
+
+
+
+
+
+
+
+</body>
+
+<script>
+    const hamburgerMenu = document.querySelector(".hamburger-menu");
+    const navMenu = document.querySelector(".nav-menu")
+
+    hamburgerMenu.addEventListener("click", () => {
+        hamburgerMenu.classList.toggle("active");
+        navMenu.classList.toggle("active");
+    })
+
+    document.querySelectorAll(".nav-link").forEach(n => n. addEventListener("click", () =>{
+        hamburgerMenu.classList.remove("active");
+        navMenu.classList.remove("active");
+
+    }))
+</script>
+
+</html>
