@@ -9,7 +9,7 @@ body {
 html {
     background-color: rgba(249, 246, 244, 1); /*sets bg colour for the whole page, all pages*/
     /* margin: auto 5%; */
-    /*scroll-behavior: smooth; /*makes jump links scroll smoothly instead of jumping*/
+    scroll-behavior: smooth; /*makes jump links scroll smoothly instead of jumping*/
 }
 
 a {
@@ -529,18 +529,24 @@ img {
     
 }
 
-#matcha-care {
+.matcha-care {
     display: grid;
     grid-template-areas: 
-        'header header header'
-        'main aside aside'
-        'footer footer image'
-        'chashaku chashaku image';
+        'header header'
+        'main aside'
+        'footer image'
+        'chashaku image';
+    grid-template-columns: 50% 50%;
     grid-template-rows: auto;
     grid-gap: 1em 3em;
-    padding: 10px 30px;
 
-    margin: 1% 10% 5%; /* TOP RIGHT BOTTOM LEFT */
+    margin: 1% 15% 5% 15% /* TOP RIGHT BOTTOM LEFT */
+}
+
+@media (max-width: 600px) {
+    .matcha-care {
+        display: block;
+    }
 }
 
 #matcha-care-header {
@@ -555,6 +561,8 @@ img {
 
 #matcha-care img {
     grid-area: aside;
+    width: 100%;
+    height: auto;
 }
 
 #chasen-care {
@@ -568,6 +576,8 @@ img {
 
 /* THIS IS THE BEGINNING OF THE ALL ABOUT MATCHA PAGE*/ 
 
+
+/* desktop view */
 #what-is-matcha {
     display: flex;
     flex-direction: row;
@@ -587,7 +597,7 @@ img {
     height: auto;
 }
 
-
+/* mobile view */
 @media only screen and (max-width:600px) {
     #what-is-matcha {
         display: flex;
@@ -608,6 +618,7 @@ img {
     margin-top: 3%;
 }
 
+/* desktop view */
 .matcha-made-grid {
     display: grid;
     grid-column-gap: 0px;
@@ -627,6 +638,7 @@ img {
     text-align: center;
 }
 
+/* mobile and tablet view */
 @media only screen and (max-width:850px) {
     .matcha-made-grid {
         display: grid;
@@ -718,6 +730,8 @@ img {
     background: linear-gradient(0deg, rgba(249,246,244,1) 0%, rgba(115,186,79,1) 53%, rgba(36,89,2,1) 100%);
 }
 
+
+/* desktop view */
 .matcha-taste-grid {
     display: grid;
     grid-template-areas:
@@ -732,6 +746,7 @@ img {
     padding-bottom: 15%
 }
 
+/* mobile and tablet view */
 @media only screen and (max-width:800px) {
     .matcha-taste-grid {
         display: block;
@@ -746,7 +761,6 @@ img {
     text-align: center;
     margin-bottom: 15%;
 }
-
 
 
 .matcha-taste-item2 {
@@ -765,7 +779,7 @@ img {
     grid-area: astringency;
 }
 
-
+/* desktop view */
 .tea-ceremony-grid {
     display: grid;
     grid-template-areas: 
@@ -776,6 +790,7 @@ img {
     text-align: center;
 }
 
+/* mobile view */
 @media only screen and (max-width:600px){
     .tea-ceremony-grid {
         display: block;
@@ -827,7 +842,8 @@ img {
 
 /* beginning of styling for Matcha Recipes page */
 
-/*
+/* THIS IS THE ORIGINAL GRID, KEPT FOR PROCESS AND REFERENCE
+
 .recipe-grid {
     display: grid;
     grid-template-areas:
@@ -906,7 +922,7 @@ img {
     box-shadow: 0.4rem 0.4rem rgba(36, 89, 2, 1);
 } */
 
-
+/* Desktop view */
 .recipe-grid {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -974,6 +990,74 @@ img {
         width: 100%;
     }
 }
+
+
+/*  THIS IS THE STYLING TEMPLATE FOR ALL RECIPE PAGES */
+
+
+/* desktop view */
+.recipe-intro {
+    text-align: center;
+    margin: auto 20% 5% 20%; /*top right bottom left*/
+}
+
+/* mobile and tablet view: changing margins to look less awkward*/
+@media (max-width: 800px) {
+    .recipe-intro {
+        margin: auto 10% 5% 10%; /*top right bottom left*/
+    }
+}
+
+/* desktop view 2 columns */
+.materials {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-areas:
+        'img main'
+        'img2 main';
+
+    align-items: center;
+    row-gap: 1%;
+    margin: auto 10% 10% 10%; /*top right bottom left*/
+}
+
+.materials img {
+    width: 100%;
+    height: auto;
+}
+
+.img1 {
+    grid-area: img;
+    margin-bottom: 0;
+}
+
+.img2 {
+    grid-area: img2;
+    margin-top: 0;
+}
+
+.material-list {
+    grid-area: main;
+    height: fit-content; /* prevents div from stretching to the height of the pictures */
+    border-radius: 0.7rem;
+    border: 2px solid rgba(36, 89, 2, 1);
+    background: #F9F6F4;
+    padding: 5px 30px 5px 30px; /*top right bottom left */
+    box-shadow: 0.4rem 0.4rem rgba(36, 89, 2, 1);
+}
+
+
+/* mobile and tablet view with 1 column */
+@media (max-width: 800px) {
+    .materials {
+        display: block;
+        column-count: 1;
+        margin-left: 5%;
+        margin-right: 5%
+    }
+
+}
+
 
 
 
