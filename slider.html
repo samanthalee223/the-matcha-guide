@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!--Linking SwiperJS CSS-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+
+
+
+
+
+    <style>
+
+        .container {
+            min-height: 50vh;
+        }
+
+        img {
+            width: 30%;
+            height: auto;
+        }
+
+
+        .card-list .card-item {
+            color: red;
+            width: 400px;
+            padding: 35px;
+            background-color:rgb(146, 228, 231);
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .card-list .card-item .message-button:hover {
+            background-color:cornflowerblue;
+
+        }
+
+    </style>
+</head>
+<body>
+    <div class="swiper">
+            <div class="card-list swiper-wrapper">
+                <div class="card-item swiper-slide">
+                    <img src="images/bowl.png" alt="your mom" class="user-image">
+                    <p class="user-progression">your mom</p>
+                    <button class="message-button">Message</button>
+                </div>
+
+                <div class="card-item swiper-slide">
+                    <img src="images/americano.png" alt="your mom" class="user-image">
+                    <p class="user-progression">your mom</p>
+                    <button class="message-button">Message</button>
+                </div>
+
+                <div class="card-item swiper-slide">
+                    <img src="images/aiya-matcha.jpg" alt="your mom" class="user-image">
+                    <p class="user-progression">your mom</p>
+                    <button class="message-button">Message</button>
+                </div>
+
+                <div class="card-item swiper-slide">
+                    <img src="images/koicha-1.JPG" alt="your mom" class="user-image">
+                    <p class="user-progression">hi</p>
+                    <button class="message-button">Message</button>
+                </div>
+
+                <div class="card-item swiper-slide">
+                    <img src="images/usucha-1.JPG" alt="your mom" class="user-image">
+                    <p class="user-progression">your mom</p>
+                    <button class="message-button">Message</button>
+                </div>
+
+                <!--Pagination-->
+                <div class="swiper-pagination"></div>
+
+                <!--Arrow buttons-->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+    </div>
+
+
+
+    <!--Linking SwiperJS Script-->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

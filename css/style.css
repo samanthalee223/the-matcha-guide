@@ -433,7 +433,7 @@ p {
 }
 */
 
-.buy-grid {
+.buy-carousel {
     /*display: grid;
     grid-template-areas:
       'header header header aside aside aside'
@@ -442,7 +442,7 @@ p {
     grid-gap: 1em 3em; */
 
     display: flex;
-    overflow-x: auto;
+    overflow-x: scroll;
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
 
@@ -453,7 +453,7 @@ p {
     margin: 0; 
   }
 
-.buy-grid a {
+.buy-carousel a {
     color: rgba(249, 246, 244, 1);
     text-decoration: none;
 }

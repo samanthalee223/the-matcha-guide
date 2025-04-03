@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <!--source: https://swiperjs.com/get-started-->
+
+
+
+    <style>
+        .swiper {
+            width: 70%;
+            height: 300px;
+            }
+
+        .swiper-slide {
+            max-width: 400px;
+            background-color: rgb(154, 182, 183);
+        }
+
+        .swiper-slide img {
+            width: 40%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <!-- Slider main container -->
+    <div class="swiper">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+        <!-- Slides -->
+        <div class="swiper-slide">
+            <a href="index.html"><img src="images/aiya-matcha.jpg"></a>
+        </div>
+
+        <div class="swiper-slide" style="background-color: rgb(33, 69, 70)">Slide 2</div>
+
+        <div class="swiper-slide">Slide 3</div>
+
+        <div class="swiper-slide">Slide 4</div>
+
+        <div class="swiper-slide">Slide 5</div>
+
+        <div class="swiper-slide">Slide 6</div>
+
+        </div>
+        <!-- If we need pagination -->
+        <div class="swiper-pagination"></div>
+    
+        <!-- If we need navigation buttons -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+    
+        <!-- If we need scrollbar -->
+        <div class="swiper-scrollbar"></div>
+    </div>
+
+
+
+
+
+
+
+    
+</body>
+
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script>
+
+const swiper = new Swiper('.swiper', {
+  loop: true,
+  spaceBetween: 30,
+
+  // If we need pagination
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+    dynamicBullets: true,
+  },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+
+
+  breakpoints: {
+    0: {
+        slidesPerView: 1
+    },
+
+    600: {
+        slidesPerView: 2
+    },
+
+    1000: {
+        slidesPerView: 3
+    },
+}
+});
+
+</script>
+</html>
