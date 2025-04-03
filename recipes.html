@@ -7,124 +7,288 @@
 <title>The Matcha Guide: Matcha Recipes</title>
 <link rel="stylesheet" href="css/style.css">
 
+<style>
+    /*https://www.w3schools.com/howto/howto_js_filter_elements.asp*/
+    .recipe-grid {
+        margin-top: 2%;
+        display: grid;
+        align-items: baseline;
+        grid-template-columns: 1fr 1fr 1fr;
+        column-gap: 25px;
+        row-gap: 80px
+    }
+
+    /*display two columns when screen size hits 600px */
+    @media only screen and (max-width:600px) {
+        .recipe-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+
+    /*display three columns when screen size is higher than 600px */
+    @media only screen and (min-width:600px) {
+        .recipe-gridr {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+    }
+
+    /* display one column when screen size is less than 400px*/
+    @media only screen and (max-width:400px) {
+        .recipe-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+        }
+    }
+
+    .filterDiv {
+        display: flex;
+        flex-direction: column;
+        line-height: 120%;
+        text-align: center;
+        margin: 2px;
+        display: none;
+        text-align: center;
+    }
+
+    .filterDiv img {
+        width: 50%;
+        margin-bottom: 15%;
+    }
+
+    .filterDiv a {
+        text-decoration: none;
+        color: green;
+        text-align: center;
+    }
+
+    .show {
+        display: block;
+    }
+
+    .btn-container {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-bottom: 10%;
+        gap: 8px;
+    }
+
+    /* Style the buttons */
+    .btn {
+        color: rgba(36, 89, 2, 1);
+        background-color: rgba(249, 246, 244, 1);
+        padding: 5px 10px 5px 10px;
+        text-decoration: none;
+        font-size: 1rem;
+        border-radius: 1.5rem;
+        border: 2px solid rgba(36, 89, 2, 1);
+        cursor: pointer;
+    }
+
+    .btn:hover {
+        background-color: #ddd;
+    }
+
+    .btn.active {
+        background-color: rgba(36, 89, 2, 1);
+        color:  rgba(249, 246, 244, 1);
+    }
+</style>
 </head>
 
 <body>
+    <header class="header">
+        <div class="header-container">
+            <div class="header-subcontainer">
+                <nav class="navbar">
+                    <a href="index.html" class="nav-branding">The Matcha Guide</a>
 
-    <!--This is the navigation bar https://www.w3schools.com/howto/howto_css_topnav_split.asp -->
-    <nav>
-        <div class="logo-div">
-            <a class="nav-logo" href="index.html">The Matcha Guide</a>
-        </div>
-    </nav>
-    <nav class="top-nav">
-            <div class="nav-bar">
-                <a class="nav-item" href="about.html">All About Matcha</a>
-                <a class="nav-item" href="essentials.html">Matcha Essentials</a>
-                <a class="active" href="recipes.html">Matcha Recipes</a>
+                    <ul class="nav-menu">
+                        <li class="nav-item">
+                            <a href="about.html" class="nav-link">All About Matcha</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="essentials.html" class="nav-link">Matcha Essentials</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="recipes.html" class="nav-link">Matcha Recipes</a>
+                        </li>
+                    </ul>
+
+                    <div class="hamburger-menu">
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                    </div>
+                </nav>
             </div>
-    </nav>
+        </div>
+    </header>
 
-    <section class="recipe-header">
-        <h1>Matcha Recipes</h1>
-    </section>
 
-    <section class="recipe-filter">
+<h1>Matcha Recipes</h1>
+
+<!--filtering buttons-->
+<div class="btn-container" id="myBtnContainer">
+    <button class="btn active" onclick="filterSelection('all')"> Show all</button>
+    <button class="btn" onclick="filterSelection('drinks')">Drinks</button>
+    <button class="btn" onclick="filterSelection('food')">Food & Dessert</button>
+    <button class="btn" onclick="filterSelection('hot')"> Hot</button>
+    <button class="btn" onclick="filterSelection('cold')"> Cold</button>
+</div>
+
+<!--recipe list with respective filters in each class-->
+<div class="recipe-grid">
+
+    <div class="filterDiv drinks hot cold">
         <div>
-            <h3>Sort by:</h3>
+            <a href="recipe-usucha.html"><img src="images/usucha-2.png"></a>
         </div>
         <div>
-            <button>Drinks</button>
-            <button>Food/Desserts</button>
-            <button>Cold Drinks</button>
-            <button>Hot Drinks</button>
-            <button>Strength</button>
-            <button>Creamy</button>
-            <button>Refreshing</button>
-            <button>Traditional</button>
-            <button>Non-Traditional</button>
+            <a href="recipe-usucha.html">Usucha</a>
         </div>
-    </section>
-
-    <section class="recipe-grid">
-        <div class="recipe-1">
-            <figure>
-                <a href="recipe-usucha.html"><img src="images/usucha-2.png"></a>
-            </figure>
-            <div>
-                <a href="recipe-usucha.html">Usucha / Thin Tea</a>
-            </div>
+    </div>
+    
+    <div class="filterDiv drinks hot cold">
+        <div>
+            <a href="recipe-usucha.html"><img src="images/usucha-2.png"></a>
         </div>
-
-        <div class="recipe-2">
-            <figure>
-                <a href="recipe-microfoam.html"><img src="images/latte-2.png"></a>
-            </figure>
-            <div>
-                <a href="recipe-microfoam.html">30-20-10 Microfoam Usucha</a>
-            </div>
+        <div>
+            <a href="recipe-usucha.html">Microfoam Matcha Shot</a>
         </div>
+    </div>
 
-        <div class="recipe-3">
-            <figure>
-                <a href="recipe-koicha.html"><img src="images/koicha-2.png"></a>
-            </figure>
-            <div>
-                <a href="recipe-koicha.html">Koicha / Thick Tea</a>
-            </div>
+    <div class="filterDiv drinks hot">
+        <div>
+            <a href="recipe-usucha.html"><img src="images/koicha-2.png"></a>
         </div>
-
-        <div class="recipe-4">
-            <figure>
-                <a href="recipe-latte.html"><img src="images/latte-2.png"></a>
-            </figure>
-            <div>
-                <a href="recipe-latte.html">Matcha Latte</a>
-            </div>
+        <div>
+            <a href="recipe-usucha.html">Koicha</a>
         </div>
+    </div>
 
-        <div class="recipe-5">
-            <figure>
-                <a href="recipe-iced-latte.html"><img src="images/latte-2.png"></a>
-            </figure>
-            <div>
-                <a href="recipe-iced-latte.html">Iced Matcha Latte</a>
-            </div>
+    <div class="filterDiv drinks hot"> 
+        <div>
+            <a href="recipe-usucha.html"><img src="images/latte-2.png"></a>
+        </div>       
+        <div>
+            <a href="recipe-usucha.html">Matcha Latte</a>
         </div>
-
-         <div class="recipe-6">
-            <figure>
-                <a href="recipe-cold-whisk.html"><img src="images/latte-2.png"></a>
-            </figure>
-            <div>
-                <a href="recipe-cold-whisk.html">Cold-Whisked Matcha Latte</a>
-            </div>
+    </div>
+    
+    <div class="filterDiv drinks cold">
+        <div>
+            <a href="recipe-usucha.html"><img src="images/latte-2.png"></a>
         </div>
-
-        <div class="recipe-7">
-            <figure>
-                <a href="recipe-americano.html"><img src="images/americano.png"></a>
-            </figure>
-            <div>
-                <a href="recipe-americano.html">Matcha Americano/Lemonade</a>
-            </div>
+        <div>
+            <a href="recipe-usucha.html">Iced Matcha Latte</a>
         </div>
-    </section>
+    </div>
+
+    <div class="filterDiv drinks cold">
+        <div>
+            <a href="recipe-usucha.html"><img src="images/usucha-2.png"></a>
+        </div>
+        <div>
+            <a href="recipe-usucha.html">Cold-Whisked Matcha Latte</a>
+        </div>
+    </div>
+
+    <div class="filterDiv drinks cold">
+        <div>
+            <a href="recipe-usucha.html"><img src="images/americano.png"></a>
+        </div>
+        <div>
+            <a href="recipe-usucha.html">Matcha Americano</a>
+        </div>
+    </div>
+
+    <div class="filterDiv food">
+        <div>
+            <a href="recipe-usucha.html"><img src="images/usucha-2.png"></a>
+        </div>
+        <div>
+            <a href="recipe-usucha.html">Matcha Cookies</a>
+        </div>
+    </div>
+</div>
 
 
-    <footer class="footer">
+<footer class="footer">
+    <div class="footer-header">
         <h2>Explore the World of Matcha</h2>
-            <a href="about.html">All About Matcha</a>
-            <a class="active" href="essentials.html">Matcha Essentials</a>
-            <a href="recipes.html">Matcha Recipes</a>
-            <a href="index.html">The Matcha Guide</a>
-            <a href="">Back to Top</a>
+    </div>
+    <div class="footer-nav">
+        <a href="about.html">All About Matcha</a>
+        <a class="active" href="essentials.html">Matcha Essentials</a>
+        <a href="recipes.html">Matcha Recipes</a>
+    </div>
+
+    <div class="footer-bottom">
+        <div class="footer-logo">
+            <a href="index.html" >The Matcha Guide</a>
+        </div>
+
+        <div class="footer-top">
+            <a href="#top">Back to Top</a>
+        </div>
+
+        <div class="footer-info">
             <p>Website created by Samantha Lee, 2025</p>
-    </footer>
-</body>
+        </div>
+    </div>
 
-
+</footer>
 
 <script src="script.js"></script>
+<script>
+
+    //for the recipe filter https://www.w3schools.com/howto/howto_js_filter_elements.asp//
+
+    filterSelection("all")
+    function filterSelection(c) {
+    var x, i;
+    x = document.getElementsByClassName("filterDiv");
+    if (c == "all") c = "";
+    for (i = 0; i < x.length; i++) {
+        w3RemoveClass(x[i], "show");
+        if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+    }
+    }
+
+    function w3AddClass(element, name) {
+    var i, arr1, arr2;
+    arr1 = element.className.split(" ");
+    arr2 = name.split(" ");
+    for (i = 0; i < arr2.length; i++) {
+        if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+    }
+    }
+
+    function w3RemoveClass(element, name) {
+    var i, arr1, arr2;
+    arr1 = element.className.split(" ");
+    arr2 = name.split(" ");
+    for (i = 0; i < arr2.length; i++) {
+        while (arr1.indexOf(arr2[i]) > -1) {
+        arr1.splice(arr1.indexOf(arr2[i]), 1);     
+        }
+    }
+    element.className = arr1.join(" ");
+    }
+
+    // Add active class to the current button (highlight it)
+    var btnContainer = document.getElementById("myBtnContainer");
+    var btns = btnContainer.getElementsByClassName("btn");
+    for (var i = 0; i < btns.length; i++) {
+    btns[i].addEventListener("click", function(){
+        var current = document.getElementsByClassName("active");
+        current[0].className = current[0].className.replace(" active", "");
+        this.className += " active";
+    });
+    }
+</script>
 
 </html>

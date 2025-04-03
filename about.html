@@ -106,142 +106,6 @@
             */
 
 
-            header {
-                position: fixed;
-                top: 0;
-                width: 100%;
-                z-index: 1;
-            }
-
-            .nav-item {
-                list-style: none;
-            }
-
-            header a {
-                font-family: 'Swily Bright', sans-serif;
-                text-decoration: none;
-                color: rgba(36, 89, 2, 1);
-                margin-right: 2%;
-                flex-shrink: 0;
-            }
-
-            .container {
-                margin: auto;
-                margin-top: 1.5%;
-            }
-
-            .subcontainer {
-                width: 90%;
-                margin: auto;
-                background-color: #F9F6F4;
-                border-radius: 0.7rem;
-                border: 3px solid rgba(36, 89, 2, 1);
-                /* box-shadow: offset-x offset-y blur-radius colour; https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow */
-                box-shadow: 0.35rem 0.35rem rgba(36, 89, 2, 1);
-            }
-
-            .navbar {
-                width: 100%;
-                height: 3rem;
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-            }
-
-            .nav-menu {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                gap: 50px;
-                white-space: nowrap;
-                margin-right: 2%;
-            }
-            
-            /*
-            .logo-div {
-                position: fixed;
-                top: 0%;
-                margin-left: 5%;
-                width: 8.5rem;
-                height: auto;
-
-                /* styling referenced from figma dev mode 
-                border-radius: 0.7rem;
-                border: 3px solid rgba(36, 89, 2, 1);
-                background: #F9F6F4;
-                /* box-shadow: offset-x offset-y blur-radius colour; https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow 
-                box-shadow: 0.35rem 0.35rem rgba(36, 89, 2, 1);
-                z-index: 2;
-            }*/
-
-            .nav-branding {
-                font-size: 1.8rem;
-                line-height: 86%;
-                padding: 10px 15px; 
-                border-radius: 0.7rem;
-                align-items: center;
-                float: left;
-                text-align: left;
-                text-decoration: none;
-                color:rgba(36, 89, 2, 1)
-            }
-
-            .hamburger-menu {
-                display: none;
-                cursor: pointer;
-                margin-right: 3%;
-            }
-
-            .bar {
-                display: block;
-                width: 25px;
-                height: 3px;
-                margin: 5px 0;
-                background-color: rgba(36, 89, 2, 1);
-                border-radius: 0.7rem;
-            }
-
-            @media(max-width:850px) {
-                .hamburger-menu {
-                    display: block;
-                }
-
-               .header.active {
-                    background-color: #F9F6F4;
-                    height: 100%;
-                    margin: 0;
-                }
-
-                .nav-menu {
-                    position: absolute;
-                    top: -1000px;
-                    gap: 0;
-
-                    flex-direction: column;
-                    width: 100%;
-                    margin-top: 100px;
-                    margin-left: -10%;
-                    margin-right: 10%
-                }
-            
-                .nav-item {
-                    top: 200px;
-                    margin-top: 50px;
-                    font-size: 2rem;
-                }
-
-                .nav-menu.active {
-                    top: 0;
-                }
-            }
-
-
-
-
-
-
-
-
         </style>
     </head>
 
@@ -269,8 +133,8 @@
     </header>-->
 
     <header class="header">
-        <div class="container">
-            <div class="subcontainer">
+        <div class="header-container">
+            <div class="header-subcontainer">
                 <nav class="navbar">
                     <a href="index.html" class="nav-branding">The Matcha Guide</a>
 
