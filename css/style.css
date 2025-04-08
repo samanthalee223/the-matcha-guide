@@ -395,6 +395,26 @@ p {
     line-height: 120%;
 }
 
+/* responsive typography */
+
+@media (max-width:600px) {
+    h1 {
+        font-size: 1.875rem;
+    }
+
+    h2 {
+        font-size: 1.4375rem;
+    }
+
+    h3 {
+        font-size: 1.0625rem;
+    }
+
+    p {
+        font-size: 0.9rem;
+    }
+}
+
 
 
 /* styling for the matcha essentials page */
@@ -413,7 +433,7 @@ p {
 
 .section-1 {
     background-color: rgba(115, 186, 79, 1);
-    color: #F9F6F4;
+    color: #000000;
 }
 
 .section-1 h1 {
@@ -439,7 +459,7 @@ p {
 
 .section-1 a {
     /* text-decoration: none; */
-    color: #F9F6F4;
+    color: #000000;
 }
 
 
