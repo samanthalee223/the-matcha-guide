@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .btn {
+            color: rgb(255, 255, 255);
+            text-align: center;
+            padding: 5px 10px 5px 10px;
+            text-decoration: none;
+            font-size: 1rem;
+            border-radius: 1.5rem;
+            border: 2px solid rgba(36, 89, 2, 1);
+            cursor: pointer;
+            width: 20%;
+
+            background: url(images/wave-solid.svg);
+            background-repeat: repeat-x;
+            animation: flow 25s linear infinite;
+        }
+
+        @keyframes flow {
+            /* beginning of the animation*/
+            0% {
+                background-position: -1200px 6px;
+            }
+            /* end of the animation, changing x-position of the image*/
+            100% {
+                background-position: 0px 0px;
+
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="btn">
+        this is a button
+    </div>
+
+</body>
+</html>

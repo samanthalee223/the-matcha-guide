@@ -5,62 +5,118 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 
-    <link
-  rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-    />
-    <!--source: https://swiperjs.com/get-started-->
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <!--source: https://swiperjs.com/get-started -->
 
 
 
     <style>
+        * {
+            margin: 0;
+        }
         .swiper {
-            width: 70%;
-            height: 300px;
+            width: 100%;
+            height: auto;
+            margin: 0;
+            background-color: aquamarine;
             }
 
         .swiper-slide {
             max-width: 400px;
-            background-color: rgb(154, 182, 183);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
         }
 
         .swiper-slide img {
-            width: 40%;
+            width: 100%;
             height: auto;
+            align-content: center;
         }
+
+        .swiper-slide a {
+            text-align: center;
+        }
+
+
+        /* target the active bullet */
+        .swiper-pagination-bullet.swiper-pagination-bullet-active {
+            margin-top: 100px;
+            background-color: rgb(39, 150, 91);
+            opacity: 1;
+        }
+
+        /* target all bullets */
+        .swiper-pagination-bullet {
+            margin-top: 100px;
+            background-color: rgb(155, 212, 190);
+            opacity: 1;
+        }
+
+        .swiper-button-prev, .swiper-button-next {
+            color: aqua;
+        }
+
+
     </style>
 </head>
 <body>
     <!-- Slider main container -->
-    <div class="swiper">
+    <section class="swiper">
         <!-- Additional required wrapper -->
         <div class="swiper-wrapper">
         <!-- Slides -->
         <div class="swiper-slide">
-            <a href="index.html"><img src="images/aiya-matcha.jpg"></a>
+            <a href="https://aiya-america.com/ceremonial-matcha-30g-tin/" target="_blank"><img src="images/aiya-matcha.jpg"></a>
+            <a href="https://aiya-america.com/ceremonial-matcha-30g-tin/" target="_blank">Aiya Ceremonial Matcha (30g)</a>
+            <ul>
+                <li>$26.40CAD or $0.81CAD/g</li>
+                <li>Available at most local grocery stores, on Aiya’s website, and on Amazon</li>
+                <li>Flavour profile: mild sweetness, slight astringency</li>
+                <li>Best for everyday use, beginner friendly, good for lattes</li>
+            </ul>
         </div>
 
-        <div class="swiper-slide" style="background-color: rgb(33, 69, 70)">Slide 2</div>
-
-        <div class="swiper-slide">Slide 3</div>
-
-        <div class="swiper-slide">Slide 4</div>
-
-        <div class="swiper-slide">Slide 5</div>
-
-        <div class="swiper-slide">Slide 6</div>
-
+        <div class="swiper-slide">
+            <a href="https://matchadive.com/products/ceremonial-matcha-organic-first-harvest-30g-pouch?selling_plan=1236041891" target="_blank"><img src="images/aiya-matcha.jpg"></a>
+            <a href="https://matchadive.com/products/ceremonial-matcha-organic-first-harvest-30g-pouch?selling_plan=1236041891" target="_blank">Matcha Dive Organic First Harvest Matcha Pouch (30g)</a>
+            <ul>
+                <li>$45.00CAD or $1.50CAD/g</li>
+                <li>Available online, Toronto based with stores across Canada</li>
+                <li>Flavour profile: creamy and rich umami flavours, very little astringency</li>
+                <li>Premium price point, good for usucha and lattes</li>
+            </ul>
         </div>
-        <!-- If we need pagination -->
+
+        <div class="swiper-slide">
+            <a href="https://teaspoons.co/products/yame-matcha?srsltid=AfmBOooCgwBwV0no3TuXF6K0PrEHpLSullz6JkrQvz0SdsDxEE8ZL9Ph" target="_blank"><img src="images/aiya-matcha.jpg"></a>
+            <a href="https://teaspoons.co/products/yame-matcha?srsltid=AfmBOooCgwBwV0no3TuXF6K0PrEHpLSullz6JkrQvz0SdsDxEE8ZL9Ph" target="_blank">Teaspoons & co Yame Matcha (30g)</a>
+            <ul>
+                <li>$24.00CAD or $0.80CAD/g</li>
+                <li>Available online, Toronto based with stores across Canada</li>
+                <li>Flavour profile: umami, creamy, nutty</li>
+                <li>Best used in lattes, beginner and wallet friendly</li>
+            </ul>
+        </div>
+
+        <div class="swiper-slide">
+            <a href="https://www.midorispring.com/en-ca/products/ceremonial-gold-class-organic-matcha-green-tea?variant=39872577732692" target="_blank"><img src="images/aiya-matcha.jpg"></a>
+            <a href="https://www.midorispring.com/en-ca/products/ceremonial-gold-class-organic-matcha-green-tea?variant=39872577732692" target="_blank">Midori Spring Organic Ceremonial Matcha Gold (30g)</a>
+            <ul>
+                <li>$30.00CAD or $1.00/g</li>
+                <li>Flavour profile: rich and full-bodied with floral notes, sweetness and umami flavours</li>
+                <li>On the stronger, more astringent side, recommended to those who enjoy floral flavours</li>
+            </ul>
+        </div>
+        </div>
+        <!--pagination-->
         <div class="swiper-pagination"></div>
     
-        <!-- If we need navigation buttons -->
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div>
-    
-        <!-- If we need scrollbar -->
-        <div class="swiper-scrollbar"></div>
-    </div>
+        <!--back and forth arrows -->
+        <div class="swiper-button-prev swiper-button-white"></div>
+        <div class="swiper-button-next swiper-button-white"></div>
+    </section>
 
 
 

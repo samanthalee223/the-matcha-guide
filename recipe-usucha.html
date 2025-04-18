@@ -4,8 +4,17 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
-<title>The Matcha Guide: Usucha</title>
+<title>Usucha</title>
 <link rel="stylesheet" href="css/style.css">
+<link rel="icon" type="image/x-icon" href="images/matcha-pour-1.svg">
+
+    <style>
+
+        body {
+            background: linear-gradient(180deg,rgba(249, 246, 244, 1) 43%, rgba(115, 186, 79, 1) 100%);
+        }
+
+    </style>
 </head>
 
 <body>
@@ -29,16 +38,18 @@
                         </li>
                     </ul>
 
-                    <div class="hamburger-menu">
-                        <span class="bar"></span>
-                        <span class="bar"></span>
-                        <span class="bar"></span>
+                    <div class="hamburger-menu" id="menu-button">
+                        <img id="menu-icon" src="images/hamburger-menu.svg" class="hamburger-menu-close"></img>
                     </div>
                 </nav>
             </div>
         </div>
     </header>
 
+    <section class="top-button">
+        <a href="recipe-americano.html">Previous Recipe</a>
+        <a href="recipe-microfoam.html">Next Recipe</a>
+    </section>
 
     <section class="recipe-intro">
         <h1>Usucha / Thin Tea</h1>
@@ -55,7 +66,7 @@
         </figure>
 
         <div class="material-list">
-            <h3>Materials and Ingredients:</h3>
+            <h2>Materials and Ingredients:</h2>
             <ul>
                 <li>2g or 1/2 teaspoon of matcha</li>
                 <li>50-100mL of hot water (80°C or 175°F is recommended for the matcha to foam properly)</li>
@@ -69,21 +80,64 @@
         </div>
     </section>
     
+
+    <h2 style="text-align: center">Instructions</h2>
     <section class="instructions">
+        <figure class="instruction-img">
+            <img src="images/usucha-1.JPG">
+        </figure>
+        <div class="instruction-div">
+            <p>1. Soak your whisk in hot water for 30-60 seconds. Be sure to wet the top of the tines as well.</p>
+        </div>
 
-        <h3>Instructions</h3>
+        <figure class="instruction-img">
+            <img src="images/usucha-1.JPG">
+        </figure>
+        <div class="instruction-div">
+            <p>2. Measure out 2g or 1/2 teaspoon of matcha and sift it into the bowl.</p>
+        </div>
 
-        <ol>
-            <li>Soak your whisk in hot water for 30-60 seconds. Be sure to wet the top of the tines as well.</li>
-            <li>Measure out 2g or 1/2 teaspoon of matcha and sift it into the bowl.</li>
-            <li>Pour 50-100mL of 80°C or 175°F water into your tea bowl. Adding more water will make a weaker tea, which is recommended for beginners. 70mL-85mL is a good starting point.</li>
-            <li>Whisk vigorously in a zig-zag motion for 20 seconds or until all of the powder is incorporated. Keep your whisk close to the bottom of the bowl but not touching it, using mainly your wrist rather than your arm. A layer of foam with air bubbles should form on the surface of the matcha.</li>
-            <li>Add ice or drink hot and enjoy!</li>
-        </ol>
+        <figure class="instruction-img">
+            <img src="images/usucha-1.JPG">
+        </figure>
+        <div class="instruction-div">
+            <p>3. Pour 50-100mL of 80°C or 175°F water into your tea bowl. Adding more water will make a weaker tea, which is recommended for beginners. 70mL-85mL is a good starting point.</p>
+        </div>
 
-        <p>Finished your matcha? Make sure to <a href="essentials.html#matcha-care">clean up properly!</a></p>
+        <figure class="instruction-img">
+            <img src="images/usucha-1.JPG">
+        </figure>
+        <div class="instruction-div">
+            <p>4. Whisk vigorously in a zig-zag motion for 20 seconds or until all of the powder is incorporated. Keep your whisk close to the bottom of the bowl but not touching it, using mainly your wrist rather than your arm. A layer of foam with air bubbles should form on the surface of the matcha.</p>
+        </div>
+
+        <figure class="instruction-img">
+            <img src="images/usucha-1.JPG">
+        </figure>
+        <div class="instruction-div">
+            <p>5. Add ice or drink hot and enjoy!</p>
+        </div>
     </section>
 
+            <!--inline css to make only this part centred-->
+            <div>
+                <p style="text-align: center">Finished your matcha? Make sure to <a href="essentials.html#matcha-care">clean up properly!</a></p>
+            </div>
+
+    <section class="bottom-button">
+        <a href="recipe-americano.html">Previous Recipe</a>
+        <a href="recipes.html">Browse All Recipes!</a>
+        <a href="recipe-microfoam.html">Next Recipe</a>
+    </section>
+
+
+    <!--make the whole button clickable instead of just the text-->
+    <div class="back-to-top" href="#top">
+        <a href="#top">↑</a>
+    </div>
+
+
+    <!--
     <section>
         <h2>Try these recipes next!</h2>
         <a href="recipes.html">Browse all recipes</a>
@@ -100,6 +154,7 @@
             <a href="filler">recommendation #3</a>
         </div>
     </section>
+    -->
 
     <footer class="footer">
         <h2>Explore the World of Matcha</h2>

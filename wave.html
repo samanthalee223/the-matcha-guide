@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
         /* // best seen at 1500px or less */
 /*   background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/85486/wave.svg) repeat-x; */
@@ -25,38 +25,6 @@ body {
   background: rgba(36, 89, 2, 1);
   top: -1000px
 }
-
-.wave {
-  background: url("images/wave.svg") repeat-x;
-  position: absolute;
-  width: 6400px;
-  top: -198px;
-  left: 0;
-  height: 198px;
-  transform: translate(0, 0, 0);
-  animation: wave 7s ease infinite;
-}
-
-.wave:nth-of-type(2) {
-  top: -168px;
-  animation: swell 4s ease infinite;
-  opacity: 1;
-}
-
-@keyframes wave {
-  0% { margin-left: 0; }
-  100% { margin-left: -1600px;}
-}
-@keyframes swell {
-  0%, 100% {
-    transform: translate(0, -30px);
-  }
-  50% {
-    transform: translate(0, 5px);
-  }
-}
-
-
 
 header {
     position: fixed;
@@ -124,7 +92,12 @@ header a {
 .hamburger-menu {
     display: none;
     cursor: pointer;
-    margin-right: 3%;
+    margin-right: 0;
+}
+
+#menu-icon {
+    width: 45%;
+    margin-left: 40%;
 }
 
 .bar {
@@ -143,11 +116,40 @@ header a {
         display: block;
     }
 
+    .hamburger-menu.active .line:nth-child(1){
+        -webkit-transform: translateY(13px);
+        -ms-transform: translateY(13px);
+        -o-transform: translateY(13px);
+        transform: translateY(13px);
+    }
+
+    .hamburger-menu.active .line:nth-child(3){
+        -webkit-transform: translateY(-13px);
+        -ms-transform: translateY(-13px);
+        -o-transform: translateY(-13px);
+        transform: translateY(-13px);
+    }
+
    .header.active {
         background-color: #F9F6F4;
         height: 100%;
         margin: 0;
+        background: url(images/wave-gradient.svg);
+            background-repeat: repeat-x;
+            animation: flow 15s linear infinite;
     }
+
+    @keyframes flow {
+            /* beginning of the animation*/
+            0% {
+                background-position: -1200px 100px;
+            }
+            /* end of the animation, changing x-position of the image*/
+            100% {
+                background-position: 0px 100px;
+
+            }
+        }
 
     .nav-menu {
         position: absolute;
@@ -178,6 +180,7 @@ header a {
 }
 
 
+
     </style>
 </head>
 <body>
@@ -197,33 +200,38 @@ header a {
                     <li class="nav-item">
                         <a href="recipes.html" class="nav-link">Matcha Recipes</a>
                     </li>
-                    <li>
-                      <div class="ocean">
-                        <div class="wave"></div>
-                        <div class="wave wave2"></div>
-                      </div>
-                    </li>
 
                 </ul>
+                    <div class="ocean">
+                      <div class="wave"></div>
+                      <div class="wave wave2"></div>
+                    </div>
 
-
-                <div class="hamburger-menu">
+                    <div class="hamburger-menu" id="menu-button">
+                        <img id="menu-icon" src="images/hamburger-menu.svg" class="hamburger-menu-close"></img>
+                    </div>
+                
+                <!--
+                <div class="hamburger-menu" id="hamburger-menu">
                     <span class="bar"></span>
                     <span class="bar"></span>
                     <span class="bar"></span>
                 </div>
+                -->
             </nav>
         </div>
     </div>
 </header>
 
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<p></p>
 
 
-
-    <div class="ocean">
-        <div class="wave"></div>
-        <div class="wave wave2"></div>
-      </div>
 
 
 
@@ -245,6 +253,21 @@ header a {
 
         }))
 
+        const menuButton = document.getElementById('menu-button');
+        const menuIcon = document.getElementById('menu-icon');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        let menuOpen = false;
+
+        menuButton.addEventListener('click', () => {
+        menuOpen = !menuOpen;
+
+        // Toggle the menu icon
+        menuIcon.src = menuOpen ? 'images/hamburger-menu-open.svg' : 'images/hamburger-menu.svg';
+
+        // Show/hide the mobile menu
+        mobileMenu.classList.toggle('hidden');
+        });
       </script>
 </body>
 </html>

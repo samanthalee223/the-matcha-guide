@@ -17,3 +17,20 @@ document.querySelectorAll(".nav-link").forEach(n => n. addEventListener("click",
 
 }))
 
+// javaScript for hamburger menu icon changing when clicked
+
+const menuButton = document.getElementById('menu-button');
+const menuIcon = document.getElementById('menu-icon');
+const mobileMenu = document.getElementById('mobile-menu');
+
+let menuOpen = false;
+
+menuButton.addEventListener('click', () => {
+menuOpen = !menuOpen;
+
+// Toggle the menu icon
+menuIcon.src = menuOpen ? 'images/hamburger-menu-open.svg' : 'images/hamburger-menu.svg';
+
+// Show/hide the mobile menu
+mobileMenu.classList.toggle('hidden');
+});

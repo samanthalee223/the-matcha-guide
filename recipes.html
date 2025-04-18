@@ -4,18 +4,22 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
-<title>The Matcha Guide: Matcha Recipes</title>
+<title>Matcha Recipes</title>
 <link rel="stylesheet" href="css/style.css">
+<link rel="icon" type="image/x-icon" href="images/matcha-pour-1.svg">
 
 <style>
     /*https://www.w3schools.com/howto/howto_js_filter_elements.asp*/
     .recipe-grid {
         margin-top: 2%;
+        margin-bottom: 30%;
+        margin-left: 10%;
+        margin-right: 10%;
         display: grid;
         align-items: baseline;
         grid-template-columns: 1fr 1fr 1fr;
         column-gap: 25px;
-        row-gap: 80px
+        row-gap: 10%;
     }
 
     /*display two columns when screen size hits 600px */
@@ -23,14 +27,17 @@
         .recipe-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
+            row-gap: 5%;
+            margin-bottom: 50%;
         }
     }
 
     /*display three columns when screen size is higher than 600px */
     @media only screen and (min-width:600px) {
-        .recipe-gridr {
+        .recipe-grid {
             display: grid;
             grid-template-columns: 1fr 1fr 1fr;
+
         }
     }
 
@@ -39,6 +46,7 @@
         .recipe-grid {
             display: grid;
             grid-template-columns: 1fr;
+            margin-bottom: 200%;
         }
     }
 
@@ -59,8 +67,15 @@
 
     .filterDiv a {
         text-decoration: none;
-        color: green;
+        color: rgba(36, 89, 2, 1);
         text-align: center;
+        font-size: 1.25rem;
+    }
+
+    .filterDiv a:hover {
+        color: rgba(115,186,79,1);
+        text-decoration: underline;
+
     }
 
     .show {
@@ -86,15 +101,62 @@
         border: 2px solid rgba(36, 89, 2, 1);
         cursor: pointer;
     }
-
+  
     .btn:hover {
-        background-color: #ddd;
+        color: rgba(249, 246, 244, 1);
+
+        background: url(images/wave-solid.svg);
+            background-repeat: repeat-x;
+            animation: flow 25s linear infinite;
     }
 
     .btn.active {
         background-color: rgba(36, 89, 2, 1);
         color:  rgba(249, 246, 244, 1);
     }
+
+    /*animation tutorial: https://www.youtube.com/watch?v=UWoX8GD0nfo*/
+    @keyframes flow {
+            /* beginning of the animation*/
+            0% {
+                background-position: -1200px 4px;
+            }
+            /* end of the animation, changing x-position of the image*/
+            100% {
+                background-position: 0px 0px;
+
+            }
+        }
+
+    @media (prefers-reduced-motion) {
+        .btn:hover {
+            animation: none;
+  }
+}
+
+/*
+    .footer-wave {
+        height: 50px;
+        width: 100%;
+        overflow-x: hidden;
+        background: url(images/wave.svg);
+            background-repeat: repeat-x;
+            animation: flow2 10s linear infinite;
+    }
+/*animation tutorial: https://www.youtube.com/watch?v=UWoX8GD0nfo*/
+/*
+@keyframes flow2 {
+            /* beginning of the animation*/
+            /*0% {
+                background-position: -1200px 0px;
+            }*/
+            /* end of the animation, changing x-position of the image
+            100% {
+                background-position: 0px 0px;
+
+            }
+        }*/
+
 </style>
 </head>
 
@@ -113,14 +175,13 @@
                             <a href="essentials.html" class="nav-link">Matcha Essentials</a>
                         </li>
                         <li class="nav-item">
-                            <a href="recipes.html" class="nav-link">Matcha Recipes</a>
+                            <!--used inline for active state because .active class would mess up the filter buttons-->
+                            <a href="recipes.html" class="nav-link" style="text-decoration:underline;">Matcha Recipes</a>
                         </li>
                     </ul>
 
-                    <div class="hamburger-menu">
-                        <span class="bar"></span>
-                        <span class="bar"></span>
-                        <span class="bar"></span>
+                    <div class="hamburger-menu" id="menu-button">
+                        <img id="menu-icon" src="images/hamburger-menu.svg" class="hamburger-menu-close"></img>
                     </div>
                 </nav>
             </div>
@@ -133,8 +194,8 @@
 <!--filtering buttons-->
 <div class="btn-container" id="myBtnContainer">
     <button class="btn active" onclick="filterSelection('all')"> Show all</button>
-    <button class="btn" onclick="filterSelection('drinks')">Drinks</button>
-    <button class="btn" onclick="filterSelection('food')">Food & Dessert</button>
+    <button class="btn" onclick="filterSelection('drink')">Traditional</button>
+    <button class="btn" onclick="filterSelection('nontraditional')">Non-Traditional</button>
     <button class="btn" onclick="filterSelection('hot')"> Hot</button>
     <button class="btn" onclick="filterSelection('cold')"> Cold</button>
 </div>
@@ -142,7 +203,7 @@
 <!--recipe list with respective filters in each class-->
 <div class="recipe-grid">
 
-    <div class="filterDiv drinks hot cold">
+    <div class="filterDiv drink hot cold">
         <div>
             <a href="recipe-usucha.html"><img src="images/usucha-2.png"></a>
         </div>
@@ -151,70 +212,63 @@
         </div>
     </div>
     
-    <div class="filterDiv drinks hot cold">
+    <div class="filterDiv nontraditional hot cold">
         <div>
-            <a href="recipe-usucha.html"><img src="images/usucha-2.png"></a>
+            <a href="recipe-microfoam.html"><img src="images/usucha-2.png"></a>
         </div>
         <div>
-            <a href="recipe-usucha.html">Microfoam Matcha Shot</a>
-        </div>
-    </div>
-
-    <div class="filterDiv drinks hot">
-        <div>
-            <a href="recipe-usucha.html"><img src="images/koicha-2.png"></a>
-        </div>
-        <div>
-            <a href="recipe-usucha.html">Koicha</a>
+            <a href="recipe-microfoam.html">30-20-10 Microfoam Usucha</a>
         </div>
     </div>
 
-    <div class="filterDiv drinks hot"> 
+    <div class="filterDiv drink hot">
         <div>
-            <a href="recipe-usucha.html"><img src="images/latte-2.png"></a>
+            <a href="recipe-koicha.html"><img src="images/koicha-2.png"></a>
+        </div>
+        <div>
+            <a href="recipe-koicha.html">Koicha</a>
+        </div>
+    </div>
+
+    <div class="filterDiv nontraditional hot"> 
+        <div>
+            <a href="recipe-latte.html"><img src="images/latte-2.png"></a>
         </div>       
         <div>
-            <a href="recipe-usucha.html">Matcha Latte</a>
+            <a href="recipe-latte.html">Matcha Latte</a>
         </div>
     </div>
     
-    <div class="filterDiv drinks cold">
+    <div class="filterDiv nontraditional cold">
         <div>
-            <a href="recipe-usucha.html"><img src="images/latte-2.png"></a>
+            <a href="recipe-iced-latte.html"><img src="images/latte-2.png"></a>
         </div>
         <div>
-            <a href="recipe-usucha.html">Iced Matcha Latte</a>
-        </div>
-    </div>
-
-    <div class="filterDiv drinks cold">
-        <div>
-            <a href="recipe-usucha.html"><img src="images/usucha-2.png"></a>
-        </div>
-        <div>
-            <a href="recipe-usucha.html">Cold-Whisked Matcha Latte</a>
+            <a href="recipe-iced-latte.html">Iced Matcha Latte</a>
         </div>
     </div>
 
-    <div class="filterDiv drinks cold">
+    <div class="filterDiv nontraditional cold">
         <div>
-            <a href="recipe-usucha.html"><img src="images/americano.png"></a>
+            <a href="recipe-cold-whisk.html"><img src="images/usucha-2.png"></a>
         </div>
         <div>
-            <a href="recipe-usucha.html">Matcha Americano</a>
+            <a href="recipe-cold-whisk.html">Cold-Whisked Matcha Latte</a>
         </div>
     </div>
 
-    <div class="filterDiv food">
+    <div class="filterDiv nontraditional cold">
         <div>
-            <a href="recipe-usucha.html"><img src="images/usucha-2.png"></a>
+            <a href="recipe-americano.html"><img src="images/americano.png"></a>
         </div>
         <div>
-            <a href="recipe-usucha.html">Matcha Cookies</a>
+            <a href="recipe-americano.html">Matcha Americano/Lemonade</a>
         </div>
     </div>
 </div>
 
+<div class="footer-wave">
+</div>
 
 <footer class="footer">
     <div class="footer-header">
@@ -245,7 +299,9 @@
 <script src="script.js"></script>
 <script>
 
+
     //for the recipe filter https://www.w3schools.com/howto/howto_js_filter_elements.asp//
+
 
     filterSelection("all")
     function filterSelection(c) {
@@ -258,6 +314,7 @@
     }
     }
 
+
     function w3AddClass(element, name) {
     var i, arr1, arr2;
     arr1 = element.className.split(" ");
@@ -266,6 +323,7 @@
         if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
     }
     }
+
 
     function w3RemoveClass(element, name) {
     var i, arr1, arr2;
@@ -279,6 +337,7 @@
     element.className = arr1.join(" ");
     }
 
+
     // Add active class to the current button (highlight it)
     var btnContainer = document.getElementById("myBtnContainer");
     var btns = btnContainer.getElementsByClassName("btn");
@@ -290,5 +349,4 @@
     });
     }
 </script>
-
 </html>

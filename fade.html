@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body {
+        margin: 0;
+        font-family: sans-serif;
+        }
+
+        .container {
+        position: relative;
+        }
+
+        .matcha-made-item {
+        position: sticky;
+        top: 0;
+        height: 100vh;
+        background: lightgreen;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 3rem;
+        opacity: 1;
+        transition: opacity 0.3s ease-out;
+        z-index: 1;
+        }
+
+/* Just to vary the colors for demo */
+.matcha-made-item:nth-child(2) { background: lightcoral; }
+.matcha-made-item:nth-child(3) { background: lightblue; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="matcha-made-item">Item 1</div>
+        <div class="matcha-made-item">Item 2</div>
+        <div class="matcha-made-item">Item 3</div>
+        <!-- Add more as needed -->
+      </div>
+
+
+
+
+      <script>
+        window.addEventListener('scroll', () => {
+            const items = document.querySelectorAll('.matcha-made-item');
+
+            items.forEach((item, index) => {
+                const next = items[index + 1];
+                if (!next) return;
+
+                const itemRect = item.getBoundingClientRect();
+                const nextRect = next.getBoundingClientRect();
+
+                const overlap = itemRect.bottom - nextRect.top;
+
+                if (overlap > 0) {
+                // Fade out current item as next item overlaps
+                const fadeAmount = Math.min(overlap / itemRect.height, 1);
+                item.style.opacity = 1 - fadeAmount;
+                } else {
+                item.style.opacity = 1;
+                }
+            });
+        });
+
+      </script>
+</body>
+</html>

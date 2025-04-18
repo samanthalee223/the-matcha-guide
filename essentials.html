@@ -4,16 +4,35 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
-<title>The Matcha Guide: Matcha Essentials</title>
+<title>Matcha Essentials</title>
 <link rel="stylesheet" href="css/style.css">
+<link rel="icon" type="image/x-icon" href="images/matcha-pour-1.svg">
 
-
+<!--for the carousel slider styles-->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
 
 
 
 
     <style>
-        
+
+            .swiper-pagination-bullet.swiper-pagination-bullet-active {
+            background-color: #F9F6F4;
+            opacity: 1;
+            display: inline-block;
+            }
+
+            /* target all bullets */
+            .swiper-pagination-bullet {
+                background-color: rgba(115, 186, 79, 1);
+                opacity: 1;
+                display: inline-block;
+            }
+
+            .swiper-button-prev, .swiper-button-next {
+                color: rgba(115, 186, 79, 1);
+                display: block;
+            }
     </style>
 </head>
 
@@ -47,17 +66,15 @@
                             <a href="about.html" class="nav-link">All About Matcha</a>
                         </li>
                         <li class="nav-item">
-                            <a href="essentials.html" class="nav-link">Matcha Essentials</a>
+                            <a href="essentials.html" class="active">Matcha Essentials</a>
                         </li>
                         <li class="nav-item">
                             <a href="recipes.html" class="nav-link">Matcha Recipes</a>
                         </li>
                     </ul>
 
-                    <div class="hamburger-menu">
-                        <span class="bar"></span>
-                        <span class="bar"></span>
-                        <span class="bar"></span>
+                    <div class="hamburger-menu" id="menu-button">
+                        <img id="menu-icon" src="images/hamburger-menu.svg" class="hamburger-menu-close"></img>
                     </div>
                 </nav>
             </div>
@@ -66,7 +83,7 @@
 
     <section class="section-1">
         <h1>Matcha Essentials</h1>
-        <h3>On this Page:</h3>
+        <h2>On this Page:</h2>
 
         <ol>
             <li><a href="#matchaware">Matchaware</a></li>
@@ -74,7 +91,7 @@
             <li><a href="#find-matcha">Finding the Right Matcha</a></li>
             <li><a href="#buy-matcha">Where to Buy Matcha</a></li>
             <li><a href="#matcha-care">Matcha Care</a></li>
-                <ol>
+                <ol class="subsection-1">
                     <li><a href="#storing-matcha">Storing Matcha</a></li>
                     <li><a href="#chasen-care">Maintaining Your Chasen</a></li>
                     <li><a href="#chashaku-care">Cleaning Your Chashaku</a></li>
@@ -96,122 +113,127 @@
 
     <div class="item-1">
             <h2>Matchaware</h2>
-        </div>
-    <div class="material-grid" id="matchaware">
+    </div>
+    <section class="material-grid" id="matchaware">
 
-        <div class="item-2">
+        <div class="material-item">
             <h3>Chasen (Tea Whisk)</h3>
-            <div>
+            <figure>
                 <img id="big-img" src="images/whisk-small.png">
-            </div>
+            </figure>
                 <p>A chasen or tea whisk is the best tool for mixing and breaking down clumps of powder, creating the perfect layer of froth on top of the tea.</p>
                 <p>Alternative: electric frother</p>
         </div>
 
-        <div class="item-3">
+        <div class="material-item">
             <h3>Chasen-tate (Whisk Stand)</h3>
-            <div>
+            <figure>
                 <img id="big-img" src="images/whisk-stand.png">
-            </div>
+            </figure>
                 <p>If you have a Chasen whisk, the best way to dry and maintain its shape is by using a chasen-tate. It spreads the bristles so they dry into its original shape and prevents mold from forming after use.</p>  
         </div>
 
-        <div class="item-4">
+        <div class="material-item">
             <h3>Chawan (Tea Bowl)</h3>
-            <div>
+            <figure>
                 <img src="images/bowl.png">
-            </div>
+            </figure>
                 <p>Chawan tea bowls have a wider, flatter basin and high walls to prevent splashing when whisking matcha. Some bowls come with a spout for easier transfer to the cup.</p>
                 <p>Alternative: regular bowl</p>
         </div>
         
-        <div class="item-5">
+        <div class="material-item">
             <h3>Chashaku (Tea Spoon) </h3>
-            <div>
+            <figure>
                 <img src="images/tea-spoon.png">
-            </div>
+            </figure>
                 <p>Chashaku is a small bamboo spoon used in traditional Japanese tea ceremonies to precisely measure and scoop matcha. Two scoops with the chashaku is approximately one teaspoon.</p>
                 <p>Alternatives: measuring spoon, regular spoon</p>
         </div>
         
-        <div class="item-6">
+        <div class="material-item">
             <h3>Tea Sifter</h3>
-            <div>
-                <img src="images/name.png">
-            </div>
+            <figure>
+                <img src="images/sifter.png">
+            </figure>
                 <p>Sifting your matcha before whisking it is the best way to guarantee the least amount of clumps in your tea.</p>  
     </div>
-</div>
+</section>
 
-<div>
+<div class="buy-title" id="buy-matchaware">
     <h2>Where to Buy Matchaware?</h2>
 </div>
+    <!-- Slider main container -->
+    <section class="swiper">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+        <!-- Slides -->
+            <div class="swiper-slide">
+                <a href="https://aiya-america.com/matcha-whisk/" target="_blank"><img src="images/aiya-whisk.jpg"></a>
+                <a href="https://aiya-america.com/matcha-whisk/" target="_blank">Aiya Matcha Whisk ↗</a>
+                <ul>
+                    <li>$15.60CAD (not including tax or shipping) for just the whisk</li>
+                    <li>beginner and budget friendly, perfect if you don’t want to invest in all of the teaware right away.</li>
+                </ul>
+            </div>
 
-<section class="buy-grid" id="buy-matchaware">
-<!--
-   
-    <a href="#buy-1">1</a>
-    <a href="#buy-2">2</a>
-    <a href="#buy-3">3</a>
-    <a href="#buy-4">4</a>
-    <a href="#buy-5">5</a>
- -->
-    <div class="buy-carousel">
-        <div class="buy-1">
-            <img src="images/name.png">
-            <p>Buucup Matcha Set</p>
-            <p>description here</p>
+            <div class="swiper-slide">
+                <a href="https://www.amazon.ca/dp/B0D1CPN5TX/ref=sspa_dk_detail_6?pd_rd_i=B0D1CPN5TX&pd_rd_w=fsLyd&content-id=amzn1.sym.99226bee-397f-4807-9350-d703b292dd4f&pf_rd_p=99226bee-397f-4807-9350-d703b292dd4f&pf_rd_r=KHNM179ND5J73721BTNP&pd_rd_wg=ZgTdu&pd_rd_r=35582db5-41cb-49dc-8da8-846b744ec808&s=kitchen&sp_csd=d2lkZ2V0TmFtZT1zcF9kZXRhaWwy&th=1" target="_blank"><img src="images/buucup.jpg"></a>
+                <a href="https://www.amazon.ca/dp/B0D1CPN5TX/ref=sspa_dk_detail_6?pd_rd_i=B0D1CPN5TX&pd_rd_w=fsLyd&content-id=amzn1.sym.99226bee-397f-4807-9350-d703b292dd4f&pf_rd_p=99226bee-397f-4807-9350-d703b292dd4f&pf_rd_r=KHNM179ND5J73721BTNP&pd_rd_wg=ZgTdu&pd_rd_r=35582db5-41cb-49dc-8da8-846b744ec808&s=kitchen&sp_csd=d2lkZ2V0TmFtZT1zcF9kZXRhaWwy&th=1" target="_blank">Buucup Matcha Set ↗</a>
+                <ul>
+                    <li>$43.99 (not including tax or shipping)</li>
+                    <li>Includes: Chasen, Chasen-tate, Chawan, Chashaku, and sifter</li>
+                    <li>Beginner and budget friendly</li>
+                </ul>
+            </div>
+
+            <div class="swiper-slide">
+                <a href="https://ippodotea.com/collections/utensils/products/basic-matcha-kit" target="_blank"><img src="images/ippodo-kit.webp" style="background-color: #F9F6F4;"></a>
+                <a href="https://ippodotea.com/collections/utensils/products/basic-matcha-kit" target="_blank">Ippodo Tea Basic Matcha Kit ↗</a>
+                <ul>
+                    <li>$161CAD (not including tax or shipping)</li>
+                    <li>Includes: Matcha Horai - 20g
+                        Tea Strainer (Chakoshi),
+                        Matcha Whisk - Chasen,
+                        Bamboo Tea Ladle (Chashaku), and
+                        Whisk Stand (Chasen-tate)
+                        A guide to preparing matcha and using the utensils</li>
+                    <li>A higher quality investment</li>
+                </ul>
+            </div>
+
         </div>
+        <!--pagination-->
+        <div class="swiper-pagination"></div>
+    
+        <!--back and forth arrows -->
+        <div class="swiper-button-prev swiper-button-white"></div>
+        <div class="swiper-button-next swiper-button-white"></div>
+    </section>
 
-        <div class="buy-2">
-            <img src="images/name.png">
-            <p>name here</p>
-            <p>description here</p>
-        </div>
-
-        <div class="buy-3">
-            <img src="images/name.png">
-            <p>name here</p>
-            <p>description here</p>
-        </div>
-
-        <div class="buy-4">
-            <img src="images/name.png">
-            <p>name here</p>
-            <p>description here</p>
-        </div>
-
-        <div class="buy-5">
-            <img src="images/name.png">
-            <p>name here</p>
-            <p>description here</p>
-        </div>
-
-    </div>
-
-</section>
 
 <!--This is the matcha powder section-->
 <section class="finding-matcha" id="find-matcha">
     <div>
         <h2>Finding the Right Matcha</h2>
         <p>Finding a matcha powder that suits both your personal tastes and budget requires a lot of trial and error. The best way to know what flavour profile your prefer is by tasting a lot of high quality matcha either at home or at a specialty tea shop. To start, here (link) is a breakdown of the different terms to describe matcha’s flavours.</p>
-        <p>You can judge the quality of a matcha based on the colour and fragrance of the powder. Usually, a more vibrant green indicates that it is higher quality and fresher whereas a more dull green means it is lower quality and from a mix of the second, third, or fourth harvest of leaves. Learn more about the growing and harvesting process here (link).</p>
+        <p>You can judge the quality of a matcha based on the colour and fragrance of the powder. Usually, a more vibrant green indicates that it is higher quality and fresher whereas a more dull green means it is lower quality and from a mix of the second, third, or fourth harvest of leaves.</p>
+
+        <a href="about.html#matcha-made">Learn more about the growing and harvesting process!</a>
     </div>
 
-    <div>
-        <img src="images/materials.jpg">
-    </div>
+    <figure>
+        <img src="images/good-matcha.jpg">
+    </figure>
 </section>
 
-<div class="buy-1">
+<div class="buy-title" id="buy-matcha">
     <h2>Where to Buy Matcha?</h2> 
      <p>There are many matcha brands on the market, so consider your personal tastes when buying. If you have a favourite cafe or tea shop that sells their own matcha powder, that is a great way to start making matcha at home with guaranteed flavours to match your taste.</p>
     <p>Here are some Canadian accessible matcha brands:</p>
 </div>
-
+<!-- THIS IS THE OLD BUY CAROUSEL
 <section class="buy-grid" id="buy-matcha">
-
     <div class="buy-carousel">
         <div class="back-arrow">
             <a href="#buy-3">←</a>
@@ -266,44 +288,123 @@
           </li>
         </ol>
       </aside>
-</section>
+</section> -->
+
+    <!-- Slider main container -->
+    <section class="swiper">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+        <!-- Slides -->
+        <div class="swiper-slide">
+            <a href="https://aiya-america.com/ceremonial-matcha-30g-tin/" target="_blank"><img src="images/aiya-matcha.jpg"></a>
+            <a href="https://aiya-america.com/ceremonial-matcha-30g-tin/" target="_blank">Aiya Ceremonial Matcha (30g) ↗</a>
+            <ul>
+                <li>$26.40CAD or $0.81CAD/g</li>
+                <li>Available at most local grocery stores, on Aiya’s website, and on Amazon</li>
+                <li>Flavour profile: mild sweetness, slight astringency</li>
+                <li>Best for everyday use, beginner friendly, good for lattes</li>
+            </ul>
+        </div>
+
+        <div class="swiper-slide">
+            <a href="https://matchadive.com/products/ceremonial-matcha-organic-first-harvest-30g-pouch?selling_plan=1236041891" target="_blank"><img src="images/matchadive.webp"></a>
+            <a href="https://matchadive.com/products/ceremonial-matcha-organic-first-harvest-30g-pouch?selling_plan=1236041891" target="_blank">Matcha Dive Organic First Harvest Matcha Pouch (30g) ↗</a>
+            <ul>
+                <li>$45.00CAD or $1.50CAD/g</li>
+                <li>Available online, Toronto based with stores across Canada</li>
+                <li>Flavour profile: creamy and rich umami flavours, very little astringency</li>
+                <li>Premium price point, good for usucha and lattes</li>
+            </ul>
+        </div>
+
+        <div class="swiper-slide">
+            <a href="https://teaspoons.co/products/yame-matcha?srsltid=AfmBOooCgwBwV0no3TuXF6K0PrEHpLSullz6JkrQvz0SdsDxEE8ZL9Ph" target="_blank"><img src="images/yamematcha.webp"></a>
+            <a href="https://teaspoons.co/products/yame-matcha?srsltid=AfmBOooCgwBwV0no3TuXF6K0PrEHpLSullz6JkrQvz0SdsDxEE8ZL9Ph" target="_blank">Teaspoons & co Yame Matcha (30g) ↗</a>
+            <ul>
+                <li>$24.00CAD or $0.80CAD/g</li>
+                <li>Available online, Toronto based with stores across Canada</li>
+                <li>Flavour profile: umami, creamy, nutty</li>
+                <li>Best used in lattes, beginner and wallet friendly</li>
+            </ul>
+        </div>
+
+        <div class="swiper-slide">
+            <a href="https://www.midorispring.com/en-ca/products/ceremonial-gold-class-organic-matcha-green-tea?variant=39872577732692" target="_blank"><img src="images/msgold.webp"></a>
+            <a href="https://www.midorispring.com/en-ca/products/ceremonial-gold-class-organic-matcha-green-tea?variant=39872577732692" target="_blank">Midori Spring Organic Ceremonial Matcha Gold (30g) ↗</a>
+            <ul>
+                <li>$30.00CAD or $1.00/g</li>
+                <li>Flavour profile: rich and full-bodied with floral notes, sweetness and umami flavours</li>
+                <li>On the stronger, more astringent side, recommended to those who enjoy floral flavours</li>
+            </ul>
+        </div>
+        </div>
+        <!--pagination-->
+        <div class="swiper-pagination"></div>
+    
+        <!--back and forth arrows -->
+        <div class="swiper-button-prev swiper-button-white"></div>
+        <div class="swiper-button-next swiper-button-white"></div>
+    </section>
+
 
 <!--This is the matcha care section-->
 <section id="matcha-care" class="matcha-care">
     <h2 id="matcha-care-header">Matcha Care</h2>
 
-    <div id="storing-matcha">
-        <h3>Storing Matcha</h3>
-        <p>Fresh matcha is a vibrant green colour. Once exposed to humidity, heat, and light, matcha powder will begin to oxidize, and this will affect its flavours. To store matcha, put it in the refrigerator and try to finish it as soon as possible. After taking it out from the refrigerator, allow the matcha to return back to room temperature so it does not clump when exposed to air.</p>
-       </div> 
-       
-       <img src="images/Organic-Ceremonial-First-Harvest-Matcha-30-Gram-Pouch_61cd9203-8a7f-4f01-8de5-87aa54809887 copy.webp">
-       <img src="images/Organic-Ceremonial-First-Harvest-Matcha-30-Gram-Pouch_61cd9203-8a7f-4f01-8de5-87aa54809887 copy.webp">
+    <div id="storing-matcha" class="storing-matcha-div">
+        <div class="storing-matcha">
+            <h3>Storing Matcha</h3>
+            <p>Fresh matcha is a vibrant green colour. Once exposed to humidity, heat, and light, matcha powder will begin to oxidize, and this will affect its flavours. To store matcha, put it in the refrigerator and try to finish it as soon as possible. After taking it out from the refrigerator, allow the matcha to return back to room temperature so it does not clump when exposed to air.</p>    
+        </div>
+        <div class="storing-matcha-1">
+            <figure>
+                <img src="images/bad-matcha.jpg" >
+                <figcaption>Oxidized Matcha: notice the dull green colour</figcaption>
+    
+            </figure>
+            <figure>
+                <img src="images/good-matcha.jpg">
+                <figcaption>Fresh, High Quality Matcha: notice the bright green colour.</figcaption>    
+            </figure>
+        </div>
+        <div class="storing-matcha-2">
+        </div>
+    </div> 
 
-    <div id="chasen-care">
-        <h3>Maintaining Your Chasen</h3>
-        <p>Before whisking your matcha, you should soak the whisk in a bowl or chawan with hot water for 30-60 seconds. This process is called chasen-toji (whisk soaking) or chasen-toshi. Make sure to evenly coat the top half of the tines—the part of the chasen above the black thread—in water by swishing it around in the bowl. This expands and softens the bristles, making it easier to whisk the matcha and lessening the risk of the bamboo breaking. It also helps with identifying any broken tines and taking them off before they get into your tea.</p>
-        <p>After each time you make your matcha, rinse off any matcha residue and foam from your whisk before it dries and sticks to the tines. Swishing your whisk around in a bowl with hot water should get red of most of the tea. Do not use soap to clean your whisk. If you still see some residue, you can pour more hot water onto the whisk while rotating it. Dry your chasen upright or onto your chasen-tate (whisk stand) to maintain its shape and to prevent mold from forming on the bamboo. Make sure the inner tines go into the under hole and the outer tines rest on the outside of the chasen-tate.</p>
+    <div id="chasen-care" class="chasen-care">
+        <div>
+            <h3>Maintaining Your Chasen</h3>
+            <p>Before whisking your matcha, you should soak the whisk in a bowl or chawan with hot water for 30-60 seconds. This process is called chasen-toji (whisk soaking) or chasen-toshi. Make sure to evenly coat the top half of the tines—the part of the chasen above the black thread—in water by swishing it around in the bowl. This expands and softens the bristles, making it easier to whisk the matcha and lessening the risk of the bamboo breaking. It also helps with identifying any broken tines and taking them off before they get into your tea.</p>
+            <p>After each time you make your matcha, rinse off any matcha residue and foam from your whisk before it dries and sticks to the tines. Swishing your whisk around in a bowl with hot water should get red of most of the tea. Do not use soap to clean your whisk. If you still see some residue, you can pour more hot water onto the whisk while rotating it. Dry your chasen upright or onto your chasen-tate (whisk stand) to maintain its shape and to prevent mold from forming on the bamboo. Make sure the inner tines go into the under hole and the outer tines rest on the outside of the chasen-tate.</p>    
+        </div>
+        <div>
+            <iframe width="auto" height="315" src="https://www.youtube.com/embed/H9F0ov67VRE?si=9HVHZkuy_Sh_Cf2_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <p>Above is a video that goes into more detail about cleaning and maintaining your Chasen. <a href="https://www.youtube.com/@tezumitea" target="_blank">This channel</a> has a lot of other informative videos about matcha and tea culture in Japan.</p>    
+        </div>
     </div>
 
-    <img src="images/Organic-Ceremonial-First-Harvest-Matcha-30-Gram-Pouch_61cd9203-8a7f-4f01-8de5-87aa54809887 copy.webp">
-
-    <div id="chashaku-care">
-        <h3>Cleaning Your Chashaku</h3>
-        <p>Do not use soap or water to clean the leftover matcha on your Chashaku as it will absorb the matcha. Instead, take a clean, dry cloth or tissue and wipe off the excess powder until there is no more.</p>
+    <div id="chashaku-care" class="chashaku-care">
+        <div>
+            <h3>Cleaning Your Chashaku</h3>
+            <p>Do not use soap or water to clean the leftover matcha on your Chashaku as it will absorb the matcha. Instead, take a clean, dry cloth or tissue and wipe off the excess powder until there is no more.</p>    
+        </div>
+        <video width="auto" height="240" controls muted>
+            <source src="images/chashaku-cleaning.mov" type="video/mp4">
+        </video>
     </div>
 
 </section>
 
 
 <section class="bottom-button">
-    <a href="about.html">Learn more about matcha!</a>
-    <a href="recipes.html">Start Making Matcha at Home!</a>
+    <a href="about.html">Learn More About Matcha!</a>
+    <a href="recipes.html">Start Making Matcha!</a>
 </section>
 
 
-<div class="back-to-top">
-    <a href="#top">Back to Top ↑</a>
+ <!--make the whole button clickable instead of just the text-->
+ <div class="back-to-top" href="#top">
+    <a href="#top">↑</a>
 </div>
 
 <footer class="footer">
@@ -318,6 +419,46 @@
 
 
 <script src="script.js"></script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script>
+    //js for the carousels, source: https://swiperjs.com/get-started
+
+const swiper = new Swiper('.swiper', {
+  loop: true,
+  spaceBetween: 30,
+
+  // If we need pagination
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+    dynamicBullets: true,
+  },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+
+
+  breakpoints: {
+    400: {
+        slidesPerView: 1
+    },
+
+    800: {
+        slidesPerView: 2
+    },
+
+    1200: {
+        slidesPerView: 3
+    },
+}
+});
+
+</script>
 </body>
 
 

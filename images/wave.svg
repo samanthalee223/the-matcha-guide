@@ -8,11 +8,13 @@
         fill-rule: evenodd;
       }
     </style>
-    <linearGradient id="linear-gradient" x1="-158.6" y1="637.9" x2="-158.6" y2="636.8" gradientTransform="translate(-252959 126280.2) rotate(-180) scale(1600 198)" gradientUnits="userSpaceOnUse">
+    <linearGradient id="linear-gradient" x1="-317.7" y1="4.3" x2="-317.7" y2="5.4" gradientTransform="translate(-507518 -879.8) rotate(-180) scale(1600 -198)" gradientUnits="userSpaceOnUse">
       <stop offset="0" stop-color="#f9f6f4" stop-opacity=".2"/>
-      <stop offset=".5" stop-color="#73ba4f" stop-opacity=".6"/>
+      <stop offset=".4" stop-color="#73ba4f" stop-opacity=".6"/>
+      <stop offset=".6" stop-color="#53922f" stop-opacity=".8"/>
+      <stop offset=".8" stop-color="#30680e" stop-opacity=".9"/>
       <stop offset="1" stop-color="#245902"/>
     </linearGradient>
   </defs>
-  <path class="st0" d="M1600,121C1289,121,1190.1-.2,789,0,389,0,289,121,0,121v77h1600s0-48,0-77Z"/>
+  <path class="st0" d="M1600,121C1289,121,1190.1-.2,789,0,389,0,289,121,0,121v77h1600v-77Z"/>
 </svg>

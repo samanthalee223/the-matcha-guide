@@ -4,9 +4,9 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>The Matcha Guide: All About Matcha</title>
+        <title>All About Matcha</title>
         <link rel="stylesheet" href="css/style.css">
-
+        <link rel="icon" type="image/x-icon" href="images/matcha-pour-1.svg">
         
     <!--Linked fonts here-->
 
@@ -45,7 +45,7 @@
                 font-weight: normal;
                 font-style: normal;
 
-            }*/
+            }
 
             body {
                 font-family: 'Vistol Sans', sans-serif;
@@ -61,7 +61,7 @@
 
             p {
                 font-family: 'Vistol Sans', sans-serif;
-            }
+            }*/
 
 
 
@@ -142,7 +142,7 @@
 
                     <ul class="nav-menu">
                         <li class="nav-item">
-                            <a href="about.html" class="nav-link">All About Matcha</a>
+                            <a href="about.html" class="active">All About Matcha</a>
                         </li>
                         <li class="nav-item">
                             <a href="essentials.html" class="nav-link">Matcha Essentials</a>
@@ -152,10 +152,8 @@
                         </li>
                     </ul>
 
-                    <div class="hamburger-menu">
-                        <span class="bar"></span>
-                        <span class="bar"></span>
-                        <span class="bar"></span>
+                    <div class="hamburger-menu" id="menu-button">
+                        <img id="menu-icon" src="images/hamburger-menu.svg" class="hamburger-menu-close"></img>
                     </div>
                 </nav>
             </div>
@@ -165,7 +163,7 @@
     <section class="section-1">
         <div>
             <h1>All About Matcha</h1>
-            <h3>Table of Contents</h3>
+            <h2>Table of Contents</h2>
             <ol>
                 <li><a href="#what-is-matcha">What is Matcha?</a></li>
                 <li><a href="#matcha-made">How is Matcha Made?</a></li>
@@ -178,14 +176,20 @@
         </div>
     </section>
 
+    <section class="matcha-bg">
+        <img src="images/matcha-pour-2.svg">
+    </section>
+
     <section id="what-is-matcha">
-        <div>
-            <h2>What is Matcha?</h2>
-            <p>Matcha is a fine milled powder made from the shade-grown plant Camellia Sinensis which also produces oolong and other green teas. Matcha originates from China but has become an important part of Japanese tea culture. </p>
+        <div class="what-is-matcha">
+            <div>
+                <h2>What is Matcha?</h2>
+                <p>Matcha is a fine milled powder made from the shade-grown plant Camellia Sinensis which also produces oolong and other green teas. Matcha originates from China but has become an important part of Japanese tea culture. </p>
+            </div>
+            <figure>
+                <img src="images/swoosh-matcha.svg">
+            </figure>
         </div>
-        <figure>
-            <img src="images/swoosh-matcha.svg">
-        </figure>
     </section>
 
 
@@ -193,56 +197,67 @@
         <div class="matcha-made-grid">
             <h2>How is Matcha Made?</h2>
 
-            <div class="progress-bar"></div>
-                <div class="matcha-made-item1">
+            <div class="progress-bar">
+                <img src="images/step-1-icon.svg" class="progress-bar-icon">
+                <img src="images/step-2-icon.svg" class="progress-bar-icon">
+                <img src="images/step-3-icon.svg" class="progress-bar-icon">
+                <img src="images/step-4-icon.svg" class="progress-bar-icon">
+                <img src="images/step-5-icon.svg" class="progress-bar-icon">
+            </div>
+
+                <div class="matcha-made-item" id="step-1">
                     <div class="step-1">
                         <h2>Step 1</h2>
                         <p>The tea leaves are grown in the shade which produces more chlorophyll and produces more antioxidants and amino acids. This process is done two to six weeks before harvesting.</p> 
-                    </div>    
+                        <figure class="step-1-img">
+                            <img src="images/step-1.jpg">
+                        </figure> 
+                    </div>   
                 </div>  
-                <figure class="step-1-img">
-                    <img src="images/materials.jpg">
-                </figure> 
 
-                <div class="matcha-made-item2">
+                <div class="matcha-made-item" id="step-2">
                     <div class="step-2">
                         <h2>Step 2</h2>
                         <p>The youngest leaves are hand picked for the first harvest in mid-April to mid-May and are the highest quality. The second harvest occurs around 40 days after.</p>
+                    
+                        <figure class="step-2-img">
+                            <img src="images/step-2.jpg">
+                        </figure>
                     </div>  
-                </div> 
-                <figure class="step-2-img">
-                    <img src="images/materials.jpg">
-                </figure>  
+                </div>  
 
-                <div class="matcha-made-item3">
+                <div class="matcha-made-item" id="step-3">
                     <div class="step-3">
                         <h2>Step 3</h2>
                         <p>The harvested leaves are steamed to prevent them from oxidizing and dried. The dried tea leaves are crushed into tencha, the result before the final matcha powder is made.</p>
+                    
+                        <figure class="step-3-img">
+                            <img src="images/step-3.jpg">
+                        </figure>
                     </div>
                 </div>
-                <figure class="step-3-img">
-                    <img src="images/materials.jpg">
-                </figure>
 
-                <div class="matcha-made-item4">
+                <div class="matcha-made-item" id="step-4">
                     <div class="step-4">
                         <h2>Step 4</h2>
                         <p>The crushed leaves are de-stemmed and graded before being stored in a refrigerated room.</p>
+                        
+                        <figure class="step-4-img">
+                            <img src="images/step-4.jpg">
+                        </figure>
                     </div>
                 </div>
-                <figure class="step-4-img">
-                    <img src="images/materials.jpg">
-                </figure>
 
-                <div class="matcha-made-item5">
+                <div class="matcha-made-item" id="step-5">
                     <div class="step-5">
                         <h2>Step 5</h2>
                         <p>Tea processors grind the tencha into a fine powder, creating matcha.</p>
+                        
+                        <figure class="step-5-img">
+                            <img src="images/step-5.jpg">
+                        </figure>
                     </div>
                 </div>
-                <figure class="step-5-img">
-                    <img src="images/materials.jpg">
-                </figure>
         </div>
     </section>
 
@@ -291,6 +306,7 @@
                     <figure class="usucha-img">
                         <img src="images/usucha-1.JPG">
                     </figure>
+                <a href="recipe-usucha.html">Learn how to make Usucha!</a>
             </div>
             <div class="koicha">
                 <h3>Koicha (Thick Tea)</h3>
@@ -298,6 +314,7 @@
                     <figure class="koicha-img">
                         <img src="images/koicha-1.JPG">
                     </figure>
+                <a href="recipe-koicha.html">Learn how to make Koicha!</a>
             </div>
         </div>
     </section>
@@ -314,19 +331,17 @@
             <h2>Health Benefits</h2>
             <p>Due to shade growing techniques, matcha is rich in antioxidants and L-theanine, an amino acid that helps with relaxation while giving you a boost of energy. L-theanine is known to reduce stress, improve sleep quality, and lessen the negative effects of caffeine. Since the leaves are ground into a fine powder, matcha contains nutrients from the whole plant.</p>    
         </div>
-        <figure>
-            <img src="images/name.png">
-        </figure>
     </section>
 
     <section class="bottom-button">
-        <a href="essentials.html">Get Matcha Essentials</a>
-        <a href="recipes.html">Start Making Matcha</a>
+        <a href="essentials.html">Get Matcha Essentials!</a>
+        <a href="recipes.html">Start Making Matcha!</a>
     </section>
 
 
-    <div class="back-to-top">
-        <a href="#top">Back to Top ↑</a>
+    <!--make the whole button clickable instead of just the text-->
+    <div class="back-to-top" href="#top">
+        <a href="#top">↑</a>
     </div>
 
 
@@ -360,5 +375,55 @@
 
 
 <script src="script.js"></script>
+
+<script>
+
+//referenced: https://coolcssanimation.com/element-fade-out-on-scroll/
+window.addEventListener('scroll', () => {
+  const items = document.querySelectorAll('.matcha-made-item');
+
+  items.forEach((item, index) => {
+    const next = items[index + 1];
+    if (!next) return;
+
+    const itemRect = item.getBoundingClientRect();
+    const nextRect = next.getBoundingClientRect();
+
+    const overlap = itemRect.bottom - nextRect.top;
+
+    if (overlap > 0) {
+      // Fade out current item as next item overlaps
+      const fadeAmount = Math.min(overlap / itemRect.height, 1);
+      item.style.opacity = 1 - fadeAmount;
+    } else {
+      item.style.opacity = 1;
+    }
+  });
+});
+
+window.addEventListener('scroll', () => {
+  const items = document.querySelectorAll('.progress-bar-icon');
+
+  items.forEach((item, index) => {
+    const next = items[index + 1];
+    if (!next) return;
+
+    const itemRect = item.getBoundingClientRect();
+    const nextRect = next.getBoundingClientRect();
+
+    const overlap = itemRect.bottom - nextRect.top;
+
+    if (overlap > 0) {
+      // Fade out current item as next item overlaps
+      const fadeAmount = Math.min(overlap / itemRect.height, 1);
+      item.style.opacity = 1 - fadeAmount;
+    } else {
+      item.style.opacity = 1;
+    }
+  });
+});
+
+</script>
+
 
 </html>
