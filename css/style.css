@@ -20,6 +20,9 @@ img {
     border-radius: 0.7rem;
 }
 
+video {
+    border-radius: 0.7rem;
+}
 
 
 /* this is the old navigation bar, kept here for reference
@@ -149,7 +152,7 @@ header {
 
 .header a {
     font-family: 'Noto Serif Display', sans-serif;
-    font-weight: 600;
+    font-weight: 600; /* Bold */
     text-decoration: none;
     color: rgba(36, 89, 2, 1);
     margin-right: 2%;
@@ -312,6 +315,17 @@ header {
     }
 }
 
+@media (max-width:400px) {
+    .nav-branding {
+        font-size: 1.3rem;
+    }
+
+    .nav-link {
+        font-size: 1.5rem;
+        margin: auto;
+    }
+}
+
 
 
 .sources {
@@ -351,6 +365,7 @@ header {
     border-radius: 1.5rem;
     border: 2px solid rgba(36, 89, 2, 1);
     text-align: center;
+    font-weight: 600; /*Bold*/
 }
 
 @media (max-width:600px) {
@@ -398,6 +413,8 @@ header {
     font-size: 1rem;
     margin-top: 100px;
     text-align: center;
+    margin-left: 5%;
+    margin-right: 5%;
 }
 
 .top-button a:hover {
@@ -520,7 +537,7 @@ header {
 
 h1 {
     font-family: 'Noto Serif Display', sans-serif;
-    font-weight: 400;
+    font-weight: 600;
     margin-top: 150px;
     text-align: center;
     font-size: 3rem;
@@ -566,15 +583,15 @@ a:hover {
 
 @media (max-width:600px) {
     h1 {
-        font-size: 2.3rem;
-    }
-
-    h2 {
         font-size: 2rem;
     }
 
+    h2 {
+        font-size: 1.8rem;
+    }
+
     h3 {
-        font-size: 1.5rem;
+        font-size: 1.4rem;
     }
 
     p {
