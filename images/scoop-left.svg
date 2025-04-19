@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="b" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" width="672.41" height="207.73" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 672.41 207.73">
+  <defs>
+    <style>
+      .f {
+        fill: url(#e);
+      }
+
+      .g {
+        fill: url(#d);
+      }
+
+      .h {
+        fill: none;
+        stroke: #a67c52;
+        stroke-width: 2.09px;
+      }
+    </style>
+    <linearGradient id="d" x1="621.74" y1="-173.9" x2="67.04" y2="317.25" gradientTransform="translate(64.61 -127.67) rotate(24.21)" gradientUnits="userSpaceOnUse">
+      <stop offset=".01" stop-color="#c69c6d"/>
+      <stop offset=".26" stop-color="#d0ab81"/>
+      <stop offset=".69" stop-color="#e0c3a2"/>
+      <stop offset=".93" stop-color="#e6ccaf"/>
+    </linearGradient>
+    <linearGradient id="e" x1="105.84" y1="179.57" x2="132.63" y2="323.1" gradientTransform="translate(65 -125.47) rotate(20.33) scale(.75 1.03)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#73ba4f"/>
+      <stop offset=".26" stop-color="#70b64c"/>
+      <stop offset=".45" stop-color="#68ad45"/>
+      <stop offset=".62" stop-color="#5b9d38"/>
+      <stop offset=".78" stop-color="#488626"/>
+      <stop offset=".93" stop-color="#31690e"/>
+      <stop offset="1" stop-color="#245902"/>
+    </linearGradient>
+  </defs>
+  <g id="c" data-name="Layer 3">
+    <g>
+      <g>
+        <path class="g" d="M668.44,1.08c3.44,1.73,3.76,7.3,1.43,9.09s-351.76,118.84-351.76,118.84l-26.72,11.25-75.85,28.65-51.17,17.54-32.16,11.14s-11.38,5.18-23.31,6.85c-11.93,1.67-11.17,3.59-34.66.92s-38.09-13.94-41.52-18.09S-5.01,147.86,1.98,136.53s57.65,34.19,57.65,34.19c0,0,9.61,5.7,27.66,6.58,18.04.88,175.08-52.02,175.08-52.02l39.03-14.53,10.71-3.71,1.33-1.98,167.4-49.93S665-.65,668.44,1.08Z"/>
+        <path class="h" d="M668.44,1.08c3.44,1.73,3.76,7.3,1.43,9.09s-351.76,118.84-351.76,118.84l-26.72,11.25-75.85,28.65-51.17,17.54-32.16,11.14s-11.38,5.18-23.31,6.85c-11.93,1.67-11.17,3.59-34.66.92s-38.09-13.94-41.52-18.09S-5.01,147.86,1.98,136.53s57.65,34.19,57.65,34.19c0,0,9.61,5.7,27.66,6.58,18.04.88,175.08-52.02,175.08-52.02l39.03-14.53,10.71-3.71,1.33-1.98,167.4-49.93S665-.65,668.44,1.08Z"/>
+      </g>
+      <path class="f" d="M70.95,119.19c6.55,2.34,11.18,7.69,13.42,14.86,5.32,17.05,5.15,29.87,8.91,48.14.4,1.94-10.28,2.88-24.87.71-15.15-2.25-59.61-18.53-53.67-27.27,10.69-15.72,37.51-43.13,56.22-36.44Z"/>
+    </g>
+  </g>
+</svg>

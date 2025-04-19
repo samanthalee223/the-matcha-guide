@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="b" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" width="156.68" height="242.91" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 156.68 242.91">
+  <defs>
+    <style>
+      .f, .g {
+        fill: none;
+        stroke-linecap: round;
+      }
+
+      .f, .g, .h, .i {
+        stroke-width: 6.57px;
+      }
+
+      .f, .h, .i {
+        stroke: #a67c52;
+      }
+
+      .g {
+        stroke: #000;
+      }
+
+      .h {
+        fill: url(#d);
+      }
+
+      .i {
+        fill: url(#e);
+      }
+    </style>
+    <linearGradient id="d" x1="32.87" y1="74.3" x2="112.53" y2="74.3" gradientUnits="userSpaceOnUse">
+      <stop offset=".01" stop-color="#c69c6d"/>
+      <stop offset=".41" stop-color="#d2af87"/>
+      <stop offset=".93" stop-color="#e6ccaf"/>
+    </linearGradient>
+    <linearGradient id="e" x1="71.03" y1="63.62" x2="71.03" y2="3.29" xlink:href="#d"/>
+  </defs>
+  <g id="c" data-name="Layer 5">
+    <g>
+      <path class="f" d="M136.61,235.61c4.93-3.19,16.37-15.78,16.78-26.14.41-10.36-30.96-86.54-45.96-125.14"/>
+      <path class="f" d="M23.34,239.62c-5.14-2.84-17.45-14.58-18.59-24.89-1.14-10.31,24.76-88.51,36.99-128.08"/>
+      <path class="f" d="M110.17,236.55c3.6-3.12,11.9-15.49,12.1-25.76.2-10.27-20.76-87.45-32.14-125.84"/>
+      <path class="f" d="M49.77,238.69c-3.81-2.86-12.97-14.61-13.9-24.84-.93-10.23,14.52-88.7,23.15-127.8"/>
+      <path class="f" d="M91.14,237.22c2.13-3.09,6.96-15.45,6.94-25.79-.02-10.35-10.89-87.25-18.3-126.12"/>
+      <path class="f" d="M68.81,238.01c-2.34-2.94-8.03-14.91-8.74-25.24-.71-10.32,4.68-87.8,9.33-127.1"/>
+      <path class="h" d="M112.53,63.43l-.48,19-77.36,2.74-1.82-18.92,79.66-2.82Z"/>
+      <path class="i" d="M106.79,61.16l-69.49,2.46-2.03-57.21,34.3-3.12,35.19.67,2.03,57.21Z"/>
+      <path class="g" d="M114.08,84.09l-88.36,3.13M25.72,87.22l-22.43,7.77M25.72,87.22l-17.95-5.56"/>
+    </g>
+  </g>
+</svg>

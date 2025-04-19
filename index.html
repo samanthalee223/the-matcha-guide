@@ -13,9 +13,283 @@
 <!--fonts!-->
 <link href="https://fonts.cdnfonts.com/css/noto-serif-display" rel="stylesheet">
 
+
+
+    <style>
+
+        .welcome {
+            display: grid;
+            grid-template-areas:
+                'header gif'
+                'slogan slogan';
+            grid-template-columns: 50% 50%;
+            align-items: center;
+            column-gap: 10vw;
+            margin: 80px 5% auto 5%;
+        }
+
+        .welcome h1 {
+            grid-area: header;
+
+            font-size: 13rem;
+            font-weight: 500;
+            text-align: left;
+            line-height: 85%;
+            margin-top: 5%;
+            margin-left: 5%;
+            margin-bottom: 0;
+            z-index: 1;
+        }
+
+        .welcome img {
+            grid-area: gif;
+            width: 90%;
+            height: auto;
+            margin-top: 10%;
+            margin-right: 10%;
+            z-index: 0;
+        }
+
+        .welcome h2 {
+            text-align: left;
+            grid-area: slogan;
+            margin-left: 5%;
+            z-index: 1;
+        }
+
+        /*breakpoints for the welcome section */
+        @media (max-width: 1000px) {
+            .welcome {
+                display: grid;
+                grid-template-areas: 
+                    'header blank'
+                    'slogan gif'
+                    'aside gif';
+                align-items: start;
+
+            }
+
+            .welcome h1 {
+                font-size: 8rem;
+            }
+            
+            .welcome img {
+                width: 90%;
+                height: auto;
+                margin-top: -15vh;
+                margin-right: 15%;
+            }
+
+            .welcome h2 {
+                font-size: 1.5rem;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .welcome h1 {
+                font-size: 6rem;
+            }
+
+            .welcome img {
+                margin-top: -6vh;
+            }
+
+            .welcome h2 {
+                font-size: 1rem;
+            }
+        }
+
+        @media (max-width: 400px) {
+            .welcome h1 {
+                font-size: 4rem;
+            }
+
+        }
+
+
+        .about {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            margin-right: 10%;
+
+            align-items: end;
+            column-gap: -100px;
+        }
+
+        /*custom cursor for this section. Source: https://codepen.io/Rahulive/pen/RwWYmVY*/
+        .cursor {
+            display: block;
+            width: 70%;
+            height: 70%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            background: url(images/whisk-cursor.svg);
+            background-repeat:no-repeat;
+            pointer-events: none;
+            z-index:0;
+        }
+
+            
+        .why-make-matcha {
+            background: linear-gradient(0deg, rgb(170, 237, 137) 0%, rgba(249,246,244,1) 20%);
+            border-radius: 0.7rem;
+            border: 3px solid rgba(36, 89, 2, 1);
+            /* box-shadow: offset-x offset-y blur-radius colour; https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow */
+            box-shadow: 0.35rem 0.35rem rgba(36, 89, 2, 1);
+            margin-top: 50%;
+            padding: 0 30px 10px;
+            z-index:1;
+
+        }
+
+        /*breakpoints for the website about section */
+        @media (max-width: 1000px) {
+            .about {
+                grid-template-areas:
+                    'pour aside'
+                    'make-matcha make-matcha';
+                margin-right: 5%;
+            }
+            .about img {
+                grid-area: pour;
+                width: 100%;
+                height: auto;
+
+            }
+
+            .why-make-matcha {
+                grid-area: make-matcha;
+                margin-left: 5%;
+                margin-top: -21%;
+            }
+        }
+
+
+        .explore-container {
+            background: url(images/wave-gradient-2.svg);
+            margin: 0;
+
+            background-repeat: repeat-x;
+            animation: flow 10s linear infinite;
+        }
+
+        .explore {
+            display: grid;
+            grid-template-areas:
+                'header header'
+                'about essentials'
+                'recipes recipes';
+            margin: 10% 15% 0 15%;
+            column-gap: 5%;
+            align-items:start;
+        }
+
+        .explore h2 {
+            grid-area: header;
+            text-align: center;
+            z-index:1;
+
+        }
+
+        .scoop-left {
+            grid-area: header;
+            margin-left: 60%;
+        }
+
+        .about-matcha {
+            grid-area: about;
+            background: linear-gradient(0deg, rgb(170, 237, 137) 0%, rgba(249,246,244,1) 40%);
+            border-radius: 0.7rem;
+            border: 3px solid rgba(36, 89, 2, 1);
+            /* box-shadow: offset-x offset-y blur-radius colour; https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow */
+            box-shadow: 0.35rem 0.35rem rgba(36, 89, 2, 1);
+            padding: 0 30px 10px;
+
+            z-index:1;
+
+        }
+
+        .matcha-essentials {
+            grid-area: essentials;
+            background: linear-gradient(0deg, rgb(170, 237, 137) 0%, rgba(249,246,244,1) 40%);
+            border-radius: 0.7rem;
+            border: 3px solid rgba(36, 89, 2, 1);
+            /* box-shadow: offset-x offset-y blur-radius colour; https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow */
+            box-shadow: 0.35rem 0.35rem rgba(36, 89, 2, 1);
+            margin-top: 50%;
+            padding: 0 30px 10px;
+
+            z-index:1;
+
+        }
+
+        .matcha-recipes {
+            grid-area: recipes;
+            height: auto;
+            justify-content: center;
+
+            display: grid;
+            grid-template-areas:
+                'main';
+            align-items: center;
+            margin-top: 5%;
+            margin-bottom: 10%;
+
+        }
+
+        .matcha-recipes h3, .matcha-recipes a {
+            color: #F9F6F4;
+            grid-area: main;
+            text-align: center;
+            z-index: 1; 
+        }
+
+        .matcha-recipes a:hover {
+            color:rgb(166, 205, 146);
+        }
+
+        .matcha-recipes img {
+            grid-area: main;
+            width: 60%;
+            z-index: 0;
+            margin: auto;
+
+
+        }
+
+        @media (max-width: 1000px) {
+            .explore-container {
+                margin-bottom: none;
+            }
+
+            .explore {
+                display: flex;
+                flex-direction: column;
+                margin: 10% 10%;
+            }
+
+            .matcha-essentials {
+                margin-top: 5%;
+            }
+
+            .scoop-left {
+                display: none;
+            }
+
+            .matcha-recipes img {
+
+                width: 100%;
+                z-index: 0;
+                margin: auto;
+            }
+        }
+        
+    </style>
 </head>
 
 <body>
+
 
     <!--This is the navigation bar-->
     <header class="header">
@@ -44,25 +318,94 @@
         </div>
     </header>
 
-    <h1>This page is still a work in progress :D</h1>
-    <h2>Subheading 2</h2>
-    <h3>Subheading 3</h3>
-        <p>Hello world, this is the home page</p>
+    <section class="welcome">
+        <h1>The Matcha Guide</h1>
+        <img src="images/whisk-animation.gif">
+        <h2>A beginner’s guide to matcha at home.</h2>
+    </section>
+
+    <section class="about">
+        <img src="images/pour-cup.svg">
+        <div class="cursor"></div>
+        
+        <div class="why-make-matcha">
+            <h2>Why Make Matcha at Home?</h2>
+            <p>With the rising global popularity of matcha, it's becoming easier and easier to find matcha at almost every cafe. However, the quality of the matcha is often poor for a high price.</p>
+            <p>Making matcha at home is both cost effective and can be catered to personal preference, allowing for genuine appreciation for matcha's complex flavours. It also means less single-use plastic, which ensures the tradition of matcha is sustainable and long lasting.</p>
+        </div>
+    </section>
+
+    <section class="explore-container">
+        <div class="explore-subcontainer">
+            <div class="explore">
+                <h2>Explore the World of Matcha</h2>
+                <img src="images/scoop-left.svg" class="scoop-left">
+    
+                <div class="about-matcha">
+                    <h3><a href="about.html">Learn About Matcha!</a></h3>
+                    <p>Learn about the cultural significance of matcha in Japan, how matcha is made, and its health benefits.</p>
+                </div>
+        
+                <div class="matcha-essentials">
+                    <h3><a href="essentials.html">Get the Materials!</a></h3>
+                    <p>Wondering what you need to start making matcha? Learn about the traditional tea ceremony utensils, beginner friendly places to buy them, and how to maintain them.</p>
+                </div>
+        
+                <div class="matcha-recipes">
+                    <h3><a href="recipes.html">Start Making Matcha!</a></h3>
+                    <img src="images/swoosh-matcha-2.svg">
+                </div>
+            </div>
+    
+        </div>
+    </section>
+
 
 
     <footer class="footer">
-        <h2>Explore the World of Matcha</h2>
-            <a href="about.html">All About Matcha</a>
-            <a class="active" href="essentials.html">Matcha Essentials</a>
-            <a href="recipes.html">Matcha Recipes</a>
-            <a href="index.html">The Matcha Guide</a>
-            <a href="#top">Back to Top</a>
-            <p>Website created by Samantha Lee, 2025</p>
+        <div class="footer-wrapper">
+            <div class="footer-header">
+                <h2>Explore the World of Matcha</h2>
+            </div>
+            <div class="footer-nav">
+                <a href="about.html">All About Matcha</a>
+                <a href="essentials.html">Matcha Essentials</a>
+                <a href="recipes.html">Matcha Recipes</a>
+            </div>
+        
+            <div class="footer-bottom">
+                <div class="footer-logo">
+                    <h1><a href="index.html" >The Matcha Guide</a></h1>
+                </div>
+        
+                <div class="footer-top">
+                    <a href="#top">Back to Top</a>
+                </div>
+        
+                <div class="footer-info">
+                    <p>Website by Samantha Lee, 2025</p>
+                </div>
+            </div>
+        
+        </div>
     </footer>
 
 
 <script src="script.js"></script>
-     
+<script>
+    const cursor = document.querySelector('.cursor');
+
+    document.addEventListener('mousemove', e => {
+        cursor.setAttribute("style", "top: " + (e.pageY - 10) + "px; left: " + (e.pageX - 10) + "px;")
+    });
+
+    document.addEventListener('click', e => {
+        cursor.classList.add("expand");
+        setTimeout(() => {
+            cursor.classList.remove("expand");
+        }, 500);
+    });
+</script>
 </body>
 
 

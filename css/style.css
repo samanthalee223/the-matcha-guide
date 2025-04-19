@@ -135,7 +135,6 @@ video {
 
     }*/
 
-
 /* this is the updated navigation bar */
 
 header {
@@ -454,21 +453,27 @@ header {
 
 .footer {
     position: sticky;
-    /*
+    
+    
+    
+    width: 100%;
+    height: auto;
+    padding-top: 10px;
+    background-color: rgba(36, 89, 2, 1);
+    color: rgba(249, 246, 244, 1);
+}
+
+.footer-wrapper {
+    margin-left: 5%;
+    margin-right: 5%;
+
     display: grid;
     grid-template-areas: 
         'header header header'
         'link link link'
-        'bottom bottom bottom';
+        'footer footer footer';
     column-gap: 100px;
-    */
-    
-    width: 100%;
-    height: 70vh;
-    padding-top: 10px;
-    background-color: rgba(36, 89, 2, 1);
-    color: rgba(249, 246, 244, 1);
-    text-align: center;
+    justify-content: center;
 }
 
 .footer a {
@@ -477,6 +482,7 @@ header {
 
 .footer-header {
     grid-area: header;
+    margin: auto;
 }
 
 .footer-nav {
@@ -488,18 +494,24 @@ header {
 }
 
 .footer-bottom {
-    grid-area: bottom;
+    grid-area: footer;
     display: flex;
-    align-items: center;
+    align-items: last baseline;
     justify-content: center;
-    gap: 8rem;
+    gap: 85px;
     margin-top: 40vh;
     white-space: nowrap;
 }
 
-.footer-logo a {
+.footer-logo a, .footer-logo h1 {
     /*grid-area: logo;*/
     text-decoration: none;
+    margin-top: 0;
+    white-space: wrap;
+    text-align: left;
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: 90%;
 
 }
 
@@ -509,18 +521,47 @@ header {
     background-color: rgba(249, 246, 244, 1);
     padding: 5px 10px 5px 10px;
     text-decoration: none;
-    font-size: 1.25rem;
+    font-size: 1rem;
+    font-weight: 500;
 
     border-radius: 1.5rem;
     border: 2px solid rgba(36, 89, 2, 1);
 
 }
 
-.footer-info {
+.footer-info p {
    /*grid-area: info;*/
-    background-color:none;
+   font-family: 'Noto Serif Display', sans-serif;
+   font-size: 0.8rem;
+   background-color:none;
 }
 
+@media (max-width: 800px) {
+    .footer-nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+    }
+
+    .footer-bottom {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 4vh;
+        margin-bottom: 10%
+    }
+
+
+    .footer-bottom a {
+        text-align: center;
+    }
+
+    .footer-logo h1 {
+        text-align: center;
+    }
+
+}
 
 
 
@@ -965,6 +1006,10 @@ a:hover {
     align-content: center;
 }
 
+.what-is-matcha img {
+    display: none;
+}
+
 
 
 /* mobile view */
@@ -976,6 +1021,7 @@ a:hover {
     }
 
     #what-is-matcha img{
+        display: block;
         width: 100%;
         height: auto;
     }
